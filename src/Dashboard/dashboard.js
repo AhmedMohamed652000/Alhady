@@ -2,15 +2,15 @@
 export const sliderServices = [
     {
         title: 'Architectural BIM Services',
-        sliderImage: 'p1.png',
+        sliderImage: 'a1.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         link: '/service/test-service',
-        cardImage: 'p1.png',
-        icon: 'p1.png'
+        cardImage: 'a1.png',
+        icon: 'a1.png'
     },
     {
         title: 'Structural BIM Services',
-        sliderImage: 'a-1.png',
+        sliderImage: 'a2.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         link: '/service/test-service',
         cardImage: 'card-1.jpg',
@@ -18,7 +18,7 @@ export const sliderServices = [
     },
     {
         title: 'MEP BIM Services',
-        sliderImage: 'a-1.png',
+        sliderImage: 'a3.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         link: '/service/test-service',
         cardImage: 'card-1.jpg',
@@ -26,7 +26,7 @@ export const sliderServices = [
     },
     {
         title: 'Infrastructure BIM Services',
-        sliderImage: 'a-1.png',
+        sliderImage: 'a4.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         link: '/service/test-service',
         cardImage: 'card-1.jpg',
@@ -34,7 +34,7 @@ export const sliderServices = [
     },
     {
         title: 'BIM Management',
-        sliderImage: 'a-1.png',
+        sliderImage: 'a5.png',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         link: '/service/test-service',
         cardImage: 'card-1.jpg',
@@ -104,48 +104,48 @@ export const usedTools = [
         icon: 'img/p1.png'
     },
     {
-        title: 'test tool',
+        title: 'AUTODESK AUTOCAD',
         icon: 'img/p2.png'
     },
     {
-        title: 'test tool',
+        title: 'NAVISWORKS',
         icon: 'img/p3.png'
     },
     {
-        title: 'test tool',
+        title: '3DS MAX',
         icon: 'img/p4.png'
     },
     {
-        title: 'test tool',
+        title: 'AUTODESK BIM 360',
         icon: 'img/p5.png'
     },
     {
-        title: 'test tool',
+        title: 'DYNAMO',
         icon: 'img/p6.png'
     },
 
     {
-        title: 'test tool',
+        title: 'AUTOCAD CIVIL 3D',
         icon: 'img/p7.png'
     },
     {
-        title: 'test tool',
+        title: 'SKETCHUP',
         icon: 'img/p8.png'
     },
     {
-        title: 'test tool',
+        title: 'LUMION',
         icon: 'img/p9.jpg'
     },
     {
-        title: 'test tool',
+        title: 'VRAY',
         icon: 'img/p10.png'
     },
     {
-        title: 'test tool',
+        title: 'SOFISTIK',
         icon: 'img/p11.png'
     },
     {
-        title: 'test tool',
+        title: 'TEKLA STRUCTURES',
         icon: 'img/p12.png'
     },
 ]
