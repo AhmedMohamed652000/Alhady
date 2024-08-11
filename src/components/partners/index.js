@@ -10,6 +10,7 @@ import partnerImg7 from "../../img/partner-7.png";
 
 import "./style.css";
 import { usedTools } from "../../Dashboard/dashboard";
+// import { usedToolss } from "../../img";
 
 const Partners = () => {
   return (

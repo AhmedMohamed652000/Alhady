@@ -1,7 +1,7 @@
 import React from "react";
 import VideoModal from "../../components/ModalVideo";
 
-import tourBG from "../../img/tour-img.png";
+import tourBG from "../../img/tour-img1.png";
 
 import "./style.css";
 

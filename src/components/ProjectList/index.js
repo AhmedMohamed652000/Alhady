@@ -12,6 +12,7 @@ import projectImg8 from "../../img/project-11.jpg";
 import projectImg9 from "../../img/project-12.jpg";
 import projectImg10 from "../../img/project-13.jpg";
 
+
 import "./style.css";
 
 const ProjectList = () => {

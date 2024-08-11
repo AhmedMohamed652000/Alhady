@@ -15,20 +15,19 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-4 col-sm-6 order-lg-1 order-1">
               <div className="single-footer">
-                <h3>About</h3>
+                <h3>AL HADY</h3>
                 <p>
-                  Precious ipsum dolor sit amet consectetur
-                  <br /> adipisicing elit, sed dos mod tempor
+                We are professionals with expertise in design, engineering, project management, and technology offer Comprehensive Building Information Modelling (BIM) services.
                 </p>
                 <ul className="footer-contact">
                   <li>
-                    <i className="fas fa-phone-square-alt" /> (444) 123 4567 89
+                    <i className="fas fa-phone-square-alt" /> (+02) 0100 795 0111
                   </li>
                   <li>
-                    <i className="fas fa-envelope" /> support@company.com
+                    <i className="fas fa-envelope" /> info@Alhady-eg.com
                   </li>
                   <li>
-                    <i className="fas fa-map" /> 74 South Doult Street, Dubai.
+                    <i className="fas fa-map" /> EL SHROUK CITY – CAIRO – EGYPT .
                   </li>
                 </ul>
               </div>
@@ -123,7 +122,8 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <p>&copy; Copyright 2021 by Themescare</p>
+              <p>&copy; Copyright 2024 by AL-HADY</p>
+              <p>🗲 Developed by CodeMorning 🗲</p>
             </div>
           </div>
         </div>
