@@ -1,16 +1,8 @@
 import React from "react";
 
-import partnerImg1 from "../../img/partner-1.png";
-import partnerImg2 from "../../img/partner-2.png";
-import partnerImg3 from "../../img/partner-3.png";
-import partnerImg4 from "../../img/partner-4.png";
-import partnerImg5 from "../../img/partner-5.png";
-import partnerImg6 from "../../img/partner-6.png";
-import partnerImg7 from "../../img/partner-7.png";
 
-import "./style.css";
 import { usedTools } from "../../Dashboard/dashboard";
-// import { usedToolss } from "../../img";
+import "./style.css";
 
 const Partners = () => {
   return (
@@ -22,7 +14,7 @@ const Partners = () => {
               <ul>
                 {usedTools?.map((usedTools,index) => (
                   <li key={index}>
-                    <img width={150} height={150} style={{width:100,height:100}} src={usedTools.icon} alt={usedTools.title} />
+                    <img style={{width:80,height:80}} src={usedTools.icon} alt={usedTools.title} />
                   </li>
 
                 ))

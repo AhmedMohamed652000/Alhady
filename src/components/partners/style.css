@@ -1,6 +1,6 @@
 /* ===================== PARTNERS ======================*/
 .partners-area {
-	padding-bottom: 50px
+	padding: '50px 0'
 }
 
 .partner-inn ul {
@@ -28,13 +28,13 @@
 }
 
 .partner-inn ul li img {
-	opacity: 0.3;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	/* opacity: 0.3; */
 	-webkit-transition: all 0.4s ease 0s;
 	transition: all 0.4s ease 0s
 }
 
 .partner-inn ul li:hover img {
 	opacity: 1;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+	filter: grayscale();
+	-webkit-filter: grayscale();
 }
