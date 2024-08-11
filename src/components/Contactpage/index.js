@@ -27,9 +27,9 @@ const Contactpage = () => {
                   <div className="contact-info-text">
                     <h5>Head office</h5>
                     <p>
-                      74 South Doult Street,
+                      EL SHROUK CITY – CAIRO 
                       <br />
-                      Dubai.
+                      EGYPT.
                     </p>
                   </div>
                 </div>
@@ -39,8 +39,8 @@ const Contactpage = () => {
                   </div>
                   <div className="contact-info-text">
                     <h5>Phone</h5>
-                    <p>(444) 123 4567 89</p>
-                    <p>(+09) 123 4567 89</p>
+                    <p>(+02) 2030 3909</p>
+                    <p>(+02) 0100 795 0111</p>
                   </div>
                 </div>
                 <div className="single-contact-info" data-aos="fade-up">
@@ -49,8 +49,8 @@ const Contactpage = () => {
                   </div>
                   <div className="contact-info-text">
                     <h5>Email</h5>
-                    <p>info@company.com</p>
-                    <p>support@company.com</p>
+                    <p>info@alhady-eg.com</p>
+                    <p>support@alhady-eg.com</p>
                   </div>
                 </div>
               </div>
@@ -60,7 +60,7 @@ const Contactpage = () => {
             <div className="contact-page-right">
               <iframe
                 title="map"
-                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d555482.3711026354!2d55.086876101283096!3d24.842777577980748!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1629183603415!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6315.536912898343!2d31.606720753997802!3d30.158891151409797!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sar!2seg!4v1723402184763!5m2!1sar!2seg"
               ></iframe>
             </div>
           </div>
