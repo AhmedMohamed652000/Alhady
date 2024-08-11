@@ -46,7 +46,7 @@ const ServiceSection = () => {
           {sliderServices?.map((service) => {
             return <div className="service-box" data-aos="fade-up" data-aos-delay="100">
               <div className="service-icon">
-                <img src={service?.icon} alt="Interior Design" />
+                <img src={service?.icon} alt={service?.title} />
               </div>
               <div className="service-text">
                 <h3>{service?.title}</h3>
