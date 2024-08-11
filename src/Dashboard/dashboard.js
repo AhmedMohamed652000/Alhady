@@ -149,4 +149,173 @@ export const usedTools = [
         icon: 'img/p12.png'
     },
 ]
+export const reviews = [
+    {
+        description: 'lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum',
+        name: 'John Doe',
+        image: 'img/a-1.png',
+        jobTitle: 'Alhady Owner'
+    },
+    {
+        description: 'lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum',
+        name: 'John Doe',
+        image: 'img/a-1.png',
+        jobTitle: 'Alhady Owner'
+    },
+    {
+        description: 'lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum',
+        name: 'John Doe',
+        image: 'img/a-1.png',
+        jobTitle: 'Alhady Owner'
+    },
+]
+
+export const portfolioData = [
+    {
+        cardImage: 'img/a-1.png',
+        title: 'Project Name 1',
+        serviceCagegory: 'BIM'
+    },
+    {
+        cardImage: 'img/a-1.png',
+        title: 'Project Name 1',
+        serviceCagegory: 'BIM'
+    },
+    {
+        cardImage: 'img/a-1.png',
+        title: 'Project Name 1',
+        serviceCagegory: 'BIM'
+    },
+    {
+        cardImage: 'img/a-1.png',
+        title: 'Project Name 1',
+        serviceCagegory: 'BIM'
+    },
+    {
+        cardImage: 'img/a-1.png',
+        title: 'Project Name 1',
+        serviceCagegory: 'BIM'
+    },
+]
+
+export const ourTeam = [
+    {
+        profileImage: 'img/a-1.png',
+        Name: 'Ahmed Tammam',
+        Position: 'Devops'
+    },
+    {
+        profileImage: 'img/a-1.png',
+        Name: 'Ahmed Ghammes',
+        Position: 'Web Developer'
+    },
+    {
+        profileImage: 'img/a-1.png',
+        Name: 'Ahmed Tammam',
+        Position: 'Devops'
+    },
+    {
+        profileImage: 'img/a-1.png',
+        Name: 'Ahmed Ghammes',
+        Position: 'Web Developer'
+    },
+]
+
+export const ourProjects = [
+    {
+        id: 1,
+        title:'Project Name',
+        serviceCagegory:'serviceCagegory',
+        homeCardImage: 'img/a-1.png',
+        projectImage: 'img/a-1.png',
+        projectDetails:{
+            projectType:'projectType',
+            client: 'client',
+            year: 'year',
+            location:'location',
+            projectSize:'project size',
+            projectTime:'project Time',
+            pepoleWorked:'18',
+            projectCost:'project cost',
+            statisticsIcon:'img/a-1.png'
+        },
+        header:'project header',
+        description:'project description',
+        projectSamples:[
+            {
+                image: 'img/a-1.png',
+                title: 'Sample Title 1',
+                description: 'Sample Description 1'
+            },
+            {
+                image: 'img/a-1.png',
+                title: 'Sample Title 1',
+                description: 'Sample Description 1'
+            },
+        ]
+    },
+    {
+        id: 2,
+        title:'Project Name',
+        serviceCagegory:'serviceCagegory',
+        homeCardImage: 'img/a-1.png',
+        projectImage: 'img/a-1.png',
+        projectDetails:{
+            projectType:'projectType',
+            client: 'client',
+            year: 'year',
+            location:'location',
+            projectSize:'project size',
+            projectTime:'project Time',
+            pepoleWorked:'18',
+            projectCost:'project cost',
+        },
+        header:'project header',
+        description:'project description',
+        projectSamples:[
+            {
+                image: 'img/a-1.png',
+                title: 'Sample Title 1',
+                description: 'Sample Description 1'
+            },
+            {
+                image: 'img/a-1.png',
+                title: 'Sample Title 1',
+                description: 'Sample Description 1'
+            },
+        ]
+    },
+    {
+        id: 3,
+        title:'Project Name',
+        serviceCagegory:'serviceCagegory',
+        homeCardImage: 'img/a-1.png',
+        projectImage: 'img/a-1.png',
+        projectDetails:{
+            projectType:'projectType',
+            client: 'client',
+            year: 'year',
+            location:'location',
+            projectSize:'project size',
+            projectTime:'project Time',
+            pepoleWorked:'18',
+            projectCost:'project cost',
+        },
+        header:'project header',
+        description:'project description',
+        projectSamples:[
+            {
+                image: 'img/a-1.png',
+                title: 'Sample Title 1',
+                description: 'Sample Description 1'
+            },
+            {
+                image: 'img/a-1.png',
+                title: 'Sample Title 1',
+                description: 'Sample Description 1'
+            },
+        ]
+    },
+]
+
 

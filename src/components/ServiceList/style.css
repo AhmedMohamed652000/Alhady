@@ -88,16 +88,47 @@
 	margin-top: 30px;
 	margin-bottom: 0
 }
+
 /*Responsive*/
 @media(max-width: 767px) {
 	.service-area {
 		padding-top: 0
 	}
+
 	.service-page-area {
 		padding-top: 70px
 	}
+
 	.service-text h3 {
 		font-size: 30px
 	}
 
+}
+
+
+service-area .row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.service-box {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
+	background: #fff;
+	/* Add a background if needed */
+	padding: 20px;
+	/* Adjust as needed */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	/* Optional: for some visual elevation */
+	border-radius: 8px;
+	/* Optional: for rounded corners */
+}
+
+.service-box .service-text {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }

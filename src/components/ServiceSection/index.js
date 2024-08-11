@@ -42,19 +42,23 @@ const ServiceSection = () => {
   return (
     <section className="service-area">
       <div className="container">
+        <div className="site-heading text-center mt-1">
+          <h3 className="sub-title">Services</h3>
+          <h2 className="section-title">Our Services </h2>
+        </div>
         <Slider {...settings}>
-          {sliderServices?.map((service) => {
+          {[sliderServices[0], sliderServices[1], sliderServices[2]]?.map((service) => {
             return <div className="service-box" data-aos="fade-up" data-aos-delay="100">
               <div className="service-icon">
-                <img src={service?.icon} alt={service?.title} />
+                <img style={{ margin: 'auto' }} src={service?.icon} alt={service?.title} />
               </div>
               <div className="service-text">
                 <h3>{service?.title}</h3>
                 <p>
                   {service?.description}
                 </p>
-                <Link to={service?.link} className="cta-btn btn-border">
-                  Read More
+                <Link to={'/contact'} className="cta-btn btn-border">
+                  Contact Us
                 </Link>
               </div>
               <img src={service?.cardImage} alt="Interior Design" />
@@ -62,6 +66,11 @@ const ServiceSection = () => {
           })
           }
         </Slider>
+        <div className="text-center  d-block">
+              <Link to="/service" className="cta-btn btn-fill">
+                Explore More
+              </Link>
+            </div>
       </div>
     </section>
   );

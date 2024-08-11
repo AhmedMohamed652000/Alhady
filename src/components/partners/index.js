@@ -11,10 +11,14 @@ const Partners = () => {
         <div className="row">
           <div className="col-lg-10 mx-auto">
             <div className="partner-inn">
+              <div className="site-heading">
+                <h3 className="sub-title">Tools Used</h3>
+                <h2 className="section-title">Software Experince</h2>
+              </div>
               <ul>
-                {usedTools?.map((usedTools,index) => (
+                {usedTools?.map((usedTools, index) => (
                   <li key={index}>
-                    <img style={{width:80,height:80}} src={usedTools.icon} alt={usedTools.title} />
+                    <img style={{ width: 80, height: 80 }} src={usedTools.icon} alt={usedTools.title} />
                   </li>
 
                 ))

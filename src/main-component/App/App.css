@@ -29,6 +29,7 @@ body {
 
 a,
 .button {
+	color:'white';
 	-webkit-transition: all 0.3s ease-out 0s;
 	transition: all 0.3s ease-out 0s;
 }
