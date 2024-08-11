@@ -6,6 +6,7 @@ import projectImg2 from "../../img/project-2.png";
 import projectImg3 from "../../img/project-3.png";
 
 import "./style.css";
+import { ourProjects } from "../../Dashboard/dashboard";
 
 const ProjectSection = () => {
   return (
@@ -18,13 +19,12 @@ const ProjectSection = () => {
               <h2 className="section-title">Featured Work.</h2>
             </div>
             <div className="project-box" data-aos="fade-up">
-              <Link to="/projects-single">
-                <img src={projectImg1} alt="img" />
+              <Link to={`/project-details/${ourProjects[0]?.id}`}>
+                <img src={ourProjects[0]?.homeCardImage} alt="img" />
                 <h3>
-                  CONCERT HALL
-                  <br /> IN NEW WORK
+                  {ourProjects[0]?.title}
                 </h3>
-                <p>INTERIOR</p>
+                <p>{ourProjects[0]?.serviceCagegory}</p>
                 <div className="project-zoom">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ const ProjectSection = () => {
                 </div>
               </Link>
             </div>
-            <div className="text-center mt-5 d-lg-block d-none">
+            <div className="text-center mt-5 d-none d-lg-block">
               <Link to="/projects" className="cta-btn btn-fill">
                 See Projects
               </Link>
@@ -55,13 +55,12 @@ const ProjectSection = () => {
           </div>
           <div className="col-sm-6">
             <div className="project-box" data-aos="fade-up">
-              <Link to="/projects-single">
-                <img src={projectImg3} alt="img" />
+              <Link to={`/project-details/${ourProjects[1]?.id}`}>
+                <img src={ourProjects[1]?.homeCardImage} alt="img" />
                 <h3>
-                  MODERN LIVING
-                  <br /> ROOM
+                  {ourProjects[1]?.title}
                 </h3>
-                <p>INTERIOR</p>
+                <p>{ourProjects[1]?.serviceCagegory}</p>
                 <div className="project-zoom">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,13 +84,12 @@ const ProjectSection = () => {
               </Link>
             </div>
             <div className="project-box" data-aos="fade-up">
-              <Link to="/projects-single">
-                <img src={projectImg2} alt="img" />
+              <Link to={`/project-details/${ourProjects[2]?.id}`}>
+                <img src={ourProjects[2]?.homeCardImage} alt="img" />
                 <h3>
-                  MODERN HOTEL
-                  <br /> IN AUSTRALIA
+                  {ourProjects[2]?.title}
                 </h3>
-                <p>ARCHITECTURE</p>
+                <p>{ourProjects[2]?.serviceCagegory}</p>
                 <div className="project-zoom">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -114,6 +112,11 @@ const ProjectSection = () => {
                 </div>
               </Link>
             </div>
+          </div>
+          <div className="text-center mt-5 d-block d-lg-none">
+            <Link to="/projects" className="cta-btn btn-fill">
+              See Projects
+            </Link>
           </div>
         </div>
       </div>

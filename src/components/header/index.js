@@ -58,34 +58,22 @@ const Header = () => {
                       <Link to="/">Home</Link>
                     </li>
                     <li>
+                      <Link to="/service">Service</Link>
+                    </li>
+                    <li>
+                      <Link to="/projects">Projects</Link>
+                    </li>
+                    <li>
+                      <Link to="/portfolio">Portfolio</Link>
+                    </li>
+                    <li>
+                      <Link to="/team">Team</Link>
+                    </li>
+                    <li>
                       <Link to="/about">About</Link>
                     </li>
-                    <li>
-                      <Link to="/" onClick={onClick}>
-                        Projects
-                      </Link>
-                      <ul>
-                        <li>
-                          <Link to="/projects">Project</Link>
-                        </li>
-                        <li>
-                          <Link to="/projects-single">Project Details</Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <Link to="/" onClick={onClick}>
-                        Service
-                      </Link>
-                      <ul>
-                        <li>
-                          <Link to="/service">Service</Link>
-                        </li>
-                        <li>
-                          <Link to="/service-single">Service Details</Link>
-                        </li>
-                      </ul>
-                    </li>
+
+{/* 
                     <li>
                       <Link to="/" onClick={onClick}>
                         Pages
@@ -108,8 +96,8 @@ const Header = () => {
 
                       </ul>
 
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                       <Link to="/" onClick={onClick}>
                         Blog
                       </Link>
@@ -121,10 +109,8 @@ const Header = () => {
                           <Link to="/blog-single">Blog Details</Link>
                         </li>
                       </ul>
-                    </li>
-                    <li>
-                      <Link to="/contact">Contact</Link>
-                    </li>
+                    </li> */}
+                 
 
                   </ul>
                 </nav>

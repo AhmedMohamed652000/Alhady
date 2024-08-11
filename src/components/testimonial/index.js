@@ -9,6 +9,7 @@ import testimonial3 from "../../img/testimonial-3.png";
 import icon from "../../img/gridicons_quote.svg";
 
 import "./style.css";
+import { reviews } from "../../Dashboard/dashboard";
 
 class Testimonial extends Component {
   constructor(props) {
@@ -82,93 +83,25 @@ class Testimonial extends Component {
             <div className="col-lg-12">
               <div className="tetimonial-slider">
                 <Slider ref={(c) => (this.slider = c)} {...settings}>
-                  <div className="slide">
-                    <div className="single-testimonial">
-                      <div className="testimonial-text">
-                        <img src={icon} alt="icon" />
-                        <p>
-                          Precious ipsum dolor sit amet consectetur adipisicing
-                          elit, sed dos mod tempor incididun ut labore et dolore
-                          magna aliqua. Ut enim ad min veniam, quis nostrud
-                          Precious ips um dolor sit amet, consecte ut labore
-                          dolore.
-                        </p>
-                      </div>
-                      <div className="testimonial-meta">
-                        <img src={testimonial1} alt="img" />
-                        <div className="testimonial-author">
-                          <h4>Jacob William</h4>
-                          <p>Crown Plaza Owner</p>
+                  {reviews.map((review, index) => {
+                    return (
+                      <div key={index} className="slide">
+                        <div className="single-testimonial">
+                          <div className="testimonial-text">
+                            <img src={icon} alt="icon" />
+                            <p>{review.description}</p>
+                          </div>
+                          <div className="testimonial-meta">
+                            <img src={review.image} alt="img" />
+                            <div className="testimonial-author">
+                              <h4>{review.name}</h4>
+                              <p>{review.jobTitle}</p>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="slide">
-                    <div className="single-testimonial">
-                      <div className="testimonial-text">
-                        <img src={icon} alt="icon" />
-                        <p>
-                          Precious ipsum dolor sit amet consectetur adipisicing
-                          elit, sed dos mod tempor incididun ut labore et dolore
-                          magna aliqua. Ut enim ad min veniam, quis nostrud
-                          Precious ips um dolor sit amet, consecte ut labore
-                          dolore.
-                        </p>
-                      </div>
-                      <div className="testimonial-meta">
-                        <img src={testimonial2} alt="img" />
-                        <div className="testimonial-author">
-                          <h4>Emily White</h4>
-                          <p>Armada Owner</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="slide">
-                    <div className="single-testimonial">
-                      <div className="testimonial-text">
-                        <img src={icon} alt="icon" />
-                        <p>
-                          Precious ipsum dolor sit amet consectetur adipisicing
-                          elit, sed dos mod tempor incididun ut labore et dolore
-                          magna aliqua. Ut enim ad min veniam, quis nostrud
-                          Precious ips um dolor sit amet, consecte ut labore
-                          dolore.
-                        </p>
-                      </div>
-                      <div className="testimonial-meta">
-                        <img src={testimonial2} alt="img" />
-                        <div className="testimonial-author">
-                          <h4>Emily White</h4>
-                          <p>Armada Owner</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="slide">
-                    <div className="single-testimonial">
-                      <div className="testimonial-text">
-                        <img src={icon} alt="icon" />
-                        <p>
-                          Precious ipsum dolor sit amet consectetur adipisicing
-                          elit, sed dos mod tempor incididun ut labore et dolore
-                          magna aliqua. Ut enim ad min veniam, quis nostrud
-                          Precious ips um dolor sit amet, consecte ut labore
-                          dolore.
-                        </p>
-                      </div>
-                      <div className="testimonial-meta">
-                        <img src={testimonial3} alt="img" />
-                        <div className="testimonial-author">
-                          <h4>Jesica Smith</h4>
-                          <p>Bisi Plaza Manager</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    )
+                  })}
                 </Slider>
               </div>
             </div>
