@@ -38,3 +38,14 @@
 	filter: grayscale();
 	-webkit-filter: grayscale();
 }
+
+.noActive {
+	color: #2E6396 !important;
+	font-size:20px !important;
+	margin: 5px 0 20px 0;
+}
+
+.nav-item .active {
+	color: white !important;
+	background-color: #2E6396 !important;
+}
