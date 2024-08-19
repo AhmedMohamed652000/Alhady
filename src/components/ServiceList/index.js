@@ -8,8 +8,8 @@ import serviceIcon1 from "../../img/service-icon-1.png";
 import serviceIcon2 from "../../img/service-icon-2.png";
 import serviceIcon3 from "../../img/service-icon-3.png";
 
-import "./style.css";
 import { sliderServices } from './../../Dashboard/dashboard';
+import "./style.css";
 
 const ServiceList = () => {
   return (

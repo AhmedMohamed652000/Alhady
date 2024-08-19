@@ -9,7 +9,7 @@ import ProjectSection from '../../components/ProjectSection'
 import Testimonial from '../../components/testimonial'
 import BlogSection from '../../components/BlogSection'
 import Footer from '../../components/footer'
-
+import { usedTools } from '../../Dashboard/dashboard';
 
 
 const HomePage =() => {
@@ -20,7 +20,7 @@ const HomePage =() => {
             <About/>
             <ServiceSection/>
             <Tour/>
-            <Partners/>
+            <Partners usedTools={usedTools}/>
             <ProjectSection/>
             <Testimonial/>
             {/* <BlogSection/> */}
