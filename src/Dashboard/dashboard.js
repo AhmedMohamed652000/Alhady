@@ -96,6 +96,55 @@ export const sliderServices = [
         cardImage: 'img/a12.png',
         icon: 'img/i12.png'
     },
+    {
+        title: 'BIM STAFFING SERVICES',
+        sliderImage: 'a13.png',
+        description: '',
+        link: '/service/test-service',
+        cardImage: 'img/a13.png',
+        icon: 'img/i13.png'
+    },
+    {
+        title: 'LANDSCAPE BIM SERVICES',
+        sliderImage: 'a14.png',
+        description: '',
+        link: '/service/test-service',
+        cardImage: 'img/a14.png',
+        icon: 'img/i14.png'
+    },
+    {
+        title: 'INTERIOR BIM SERVICES',
+        sliderImage: 'a15.png',
+        description: '',
+        link: '/service/test-service',
+        cardImage: 'img/a15.png',
+        icon: 'img/i15.png'
+    },
+    {
+        title: 'REVIT FAMILY CREATION',
+        sliderImage: 'a16.png',
+        description: '',
+        link: '/service/test-service',
+        cardImage: 'img/a16.png',
+        icon: 'img/i16.png'
+    },
+    {
+        title: 'BIM SHOP DRAWINGS',
+        sliderImage: 'a17.png',
+        description: '',
+        link: '/service/test-service',
+        cardImage: 'img/a17.png',
+        icon: 'img/i17.png'
+    },
+    {
+        title: 'FACADE BIM SERVICES',
+        sliderImage: 'a18.png',
+        description: '',
+        link: '/service/test-service',
+        cardImage: 'img/a18.png',
+        icon: 'img/i18.png'
+    },
+
 
 ]
 export const usedTools = [
@@ -134,7 +183,7 @@ export const usedTools = [
     },
     {
         title: 'LUMION',
-        icon: 'img/p9.jpg'
+        icon: 'img/p9.png'
     },
     {
         title: 'VRAY',
@@ -149,75 +198,152 @@ export const usedTools = [
         icon: 'img/p12.png'
     },
 ]
+export const clients = [
+    {
+        title: 'AUTODESK REVIT',
+        icon: 'img/c1.png'
+    },
+    {
+        title: 'AUTODESK AUTOCAD',
+        icon: 'img/c2.png'
+    },
+    {
+        title: 'NAVISWORKS',
+        icon: 'img/c3.png'
+    },
+    {
+        title: 'NAVISWORKS',
+        icon: 'img/c4.png'
+    },
+    {
+        title: 'NAVISWORKS',
+        icon: 'img/c5.png'
+    },
+    {
+        title: 'NAVISWORKS',
+        icon: 'img/c6.png'
+    },
+    {
+        title: 'NAVISWORKS',
+        icon: 'img/c7.png'
+    },
+    {
+        title: 'NAVISWORKS',
+        icon: 'img/c8.png'
+    },
+    {
+        title: 'NAVISWORKS',
+        icon: 'img/c9.png'
+    },
+
+]
+
+export const partners = [
+    {
+        title: 'AUTODESK REVIT',
+        icon: 'img/partner1.png'
+    },
+]
 export const reviews = [
     {
         description: 'lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum',
         name: 'John Doe',
-        image: 'img/a-1.png',
+        image: 'img/person1.png',
         jobTitle: 'Alhady Owner'
     },
     {
         description: 'lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum',
         name: 'John Doe',
-        image: 'img/a-1.png',
+        image: 'img/person2.png',
         jobTitle: 'Alhady Owner'
     },
     {
         description: 'lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum',
         name: 'John Doe',
-        image: 'img/a-1.png',
+        image: 'img/person3.png',
         jobTitle: 'Alhady Owner'
     },
 ]
 
 export const portfolioData = [
     {
-        cardImage: 'img/a-1.png',
+        cardImage: 'img/t-1.png',
         title: 'Project Name 1',
         serviceCagegory: 'BIM'
     },
     {
-        cardImage: 'img/a-1.png',
+        cardImage: 'img/t-2.png',
         title: 'Project Name 1',
         serviceCagegory: 'BIM'
     },
     {
-        cardImage: 'img/a-1.png',
+        cardImage: 'img/t-3.png',
         title: 'Project Name 1',
         serviceCagegory: 'BIM'
     },
     {
-        cardImage: 'img/a-1.png',
+        cardImage: 'img/t-4.png',
         title: 'Project Name 1',
         serviceCagegory: 'BIM'
     },
     {
-        cardImage: 'img/a-1.png',
+        cardImage: 'img/t-5.png',
         title: 'Project Name 1',
         serviceCagegory: 'BIM'
     },
+    {
+        cardImage: 'img/t-6.png',
+        title: 'Project Name 1',
+        serviceCagegory: 'BIM'
+    },
+
 ]
 
 export const ourTeam = [
     {
-        profileImage: 'img/a-1.png',
-        Name: 'Ahmed Tammam',
-        Position: 'Devops'
+        profileImage: 'img/people1.png',
+        Name: 'Saad AbdElgany',
+        Position: 'Bim Specialist (Arch)'
     },
     {
-        profileImage: 'img/a-1.png',
-        Name: 'Ahmed Ghammes',
-        Position: 'Web Developer'
+        profileImage: 'img/people2.png',
+        Name: 'Khaled Ghammes',
+        Position: 'Bim Specialist (Arch)'
     },
     {
-        profileImage: 'img/a-1.png',
-        Name: 'Ahmed Tammam',
-        Position: 'Devops'
+        profileImage: 'img/people3.png',
+        Name: 'Aya Salah',
+        Position: 'Bim Modeller'
     },
     {
-        profileImage: 'img/a-1.png',
-        Name: 'Ahmed Ghammes',
-        Position: 'Web Developer'
+        profileImage: 'img/people4.png',
+        Name: 'Karim ElGareb',
+        Position: 'Bim Specialist'
+    },
+    {
+        profileImage: 'img/people5.png',
+        Name: 'Khaled Mokhtar',
+        Position: 'Bim Modeller'
+    },
+    {
+        profileImage: 'img/people6.png',
+        Name: 'Rezk Abdel Azim',
+        Position: 'Bim Manager'
+    },
+    {
+        profileImage: 'img/people7.png',
+        Name: 'Zeyad Hesham',
+        Position: 'Bim modller (Str)'
+    },
+    {
+        profileImage: 'img/people8.png',
+        Name: 'Ahmed AbdElwahab',
+        Position: 'Bim Modeller (Infra)'
+    },
+    {
+        profileImage: 'img/people9.png',
+        Name: 'Ahmed Gibrel',
+        Position: 'Bim Modeller (Infra)'
     },
 ]
 
@@ -227,6 +353,7 @@ export const ourProjects = [
         title:'Project Name',
         serviceCagegory:'serviceCagegory',
         homeCardImage: 'img/a-1.png',
+
         projectImage: 'img/a-1.png',
         projectDetails:{
             projectType:'projectType',
@@ -259,6 +386,7 @@ export const ourProjects = [
         title:'Project Name',
         serviceCagegory:'serviceCagegory',
         homeCardImage: 'img/a-1.png',
+
         projectImage: 'img/a-1.png',
         projectDetails:{
             projectType:'projectType',
@@ -290,6 +418,7 @@ export const ourProjects = [
         title:'Project Name',
         serviceCagegory:'serviceCagegory',
         homeCardImage: 'img/a-1.png',
+
         projectImage: 'img/a-1.png',
         projectDetails:{
             projectType:'projectType',

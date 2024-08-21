@@ -44,7 +44,7 @@ const Partners = ({ usedTools, clients, partners }) => {
 
   return (
     <div className="container my-5 text-center">
-      <h2 className="section-title">Our Partners in Seccess      </h2>
+      <h2 className="section-title">" Our Partners in Seccess "</h2>
       <ul className="nav nav-pills mb-3 text-center m-auto d-flex justify-content-center" id="pills-tab" role="tablist">
         <li className="nav-item noActive  " role="presentation">
           <button className="nav-link noActive  active" id="pills-tools-tab" data-bs-toggle="pill" data-bs-target="#pills-tools" type="button" role="tab" aria-controls="pills-tools" aria-selected="true">Used Tools</button>
@@ -61,7 +61,7 @@ const Partners = ({ usedTools, clients, partners }) => {
           <Slider {...settings}>
             {usedTools?.map((tool, index) => (
               <div key={index}>
-                <img src={tool.icon} alt={tool.title} style={{ width: 80, height: 80, margin: "auto" }} />
+                <img src={tool.icon} alt={tool.title} style={{ width: 200, height: 200, margin: "auto" }} />
               </div>
             ))}
           </Slider>
@@ -70,16 +70,16 @@ const Partners = ({ usedTools, clients, partners }) => {
           <Slider {...settings}>
             {clients?.map((client, index) => (
               <div key={index}>
-                <img src={client.icon} alt={client.title} style={{ width: 80, height: 80, margin: "auto" }} />
+                <img src={client.icon} alt={client.title} style={{ width: 250, height: 200, margin: "auto" }} />
               </div>
             ))}
           </Slider>
         </div>
         <div className="tab-pane fade" id="pills-partners" role="tabpanel" aria-labelledby="pills-partners-tab">
-          <Slider {...settings}>
+          <Slider {...{settings, slidesToShow:1}}>
             {partners?.map((partner, index) => (
               <div key={index}>
-                <img src={partner.icon} alt={partner.title} style={{ width: 80, height: 80, margin: "auto" }} />
+                <img src={partner.icon} alt={partner.title} style={{ width: 350, height: 200, margin: "auto" }} />
               </div>
             ))}
           </Slider>

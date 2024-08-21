@@ -1,10 +1,10 @@
 import React from "react";
 
-import Icon1 from "../../img/logo01-1.png";
-import Icon2 from "../../img/logo02-1.png";
-import Icon3 from "../../img/logo03-1.png";
-import img1 from "../../img/about-3.png";
-import img2 from "../../img/about-4.png";
+import Icon1 from "../../img/vision.png";
+import Icon2 from "../../img/mission.png";
+// import Icon3 from "../../img/logo03-1.png";
+import img1 from "../../img/about-v.png";
+import img2 from "../../img/about-m.png";
 import "./style.css";
 
 const Feature = () => {
@@ -14,10 +14,10 @@ const Feature = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="site-heading text-center">
-              <h3 className="sub-title">MODERN TRENDS OF LIVING</h3>
+              <h3 className="sub-title">PARTNER WITH ENGISOFT</h3>
               <h2 className="section-title">
-                We focused on modern
-                <br /> architecture and interior design
+                - Digitize your building & construction workflow -
+                <br/>- with a Trusted and Qualified BIM Partner -
               </h2>
             </div>
           </div>
@@ -30,10 +30,9 @@ const Feature = () => {
                   <img src={Icon1} alt="icon" />
                 </div>
                 <div className="about-text">
-                  <h3>Design Approach</h3>
+                  <h3>Our Vision</h3>
                   <p>
-                    We combine innovative design practises with traditional
-                    manufacturing techniques.
+                    AL HADY is a premier multidisciplinary BIM services provider and a leading Egypt-based firm specializing in all aspects of BIM. Our expertise spans BIM Interior, BIM Infrastructure, BIM Landscape, BIM Architecture, BIM MEP, and Scan-to-BIM modeling services, including advanced BIM 4D, BIM 5D, BIM 6D, and BIM 7D solutions.
                   </p>
                 </div>
               </div>
@@ -46,29 +45,13 @@ const Feature = () => {
                   <img src={Icon2} alt="icon" />
                 </div>
                 <div className="about-text">
-                  <h3>Innovative Solutions</h3>
+                  <h3>Our Mission</h3>
                   <p>
-                    Our core business is all about aligning our clients’ brands
-                    and businesses.
+                    We create value for our clients worldwide by delivering BIM and engineering services. Our team of over 40 experts operates across the Middle East and India. With a dynamic approach to problem-solving, we consistently provide high-quality services on time, ensuring reliable performance for our clients.
                   </p>
                 </div>
               </div>
-              <div
-                className="single-about-listing wow fadeInUp"
-                data-wow-duration="1s"
-                data-wow-delay="0.8s"
-              >
-                <div className="about-icon">
-                  <img src={Icon3} alt="icon" />
-                </div>
-                <div className="about-text">
-                  <h3>Project Management</h3>
-                  <p>
-                    As a full-service firm, Inteco is present on projects from
-                    start to finish, ensuring the ideas conceived.
-                  </p>
-                </div>
-              </div>
+
             </div>
           </div>
           <div className="col-md-6">

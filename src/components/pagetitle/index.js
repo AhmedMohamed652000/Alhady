@@ -1,14 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bg from "../../img/breadcrumb-bg.jpg";
+
+
+import servicebg from "../../img/services.png";
+import projectsbg from "../../img/projects.png";
+import portfoliobg from "../../img/portfoliocover.png";
+import teambg from "../../img/team.png";
+import aboutbg from "../../img/aboutus.png";
+import gettouchbg from "../../img/gettouch.png";
 
 import "./style.css";
+import { useLocation } from 'react-router-dom';
 
 const PageTitle = (props) => {
+  const location = useLocation ()
   return (
     <section
       className="breadcrumb-area"
-      style={{ backgroundImage: `url(${bg})` }}
+      style={{ backgroundImage: `url(${location.pathname === '/service' ? servicebg : location.pathname === '/projects' ? projectsbg : location.pathname === '/portfolio' ? portfoliobg : location.pathname === '/team' ? teambg : location.pathname === '/about' ? aboutbg : location.pathname === '/contact' ? gettouchbg : ''})` }}
     >
       <div className="hero-social">
         <ul>
@@ -55,5 +64,6 @@ const PageTitle = (props) => {
     </section>
   );
 };
+
 
 export default PageTitle;

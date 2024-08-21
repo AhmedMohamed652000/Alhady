@@ -10,6 +10,8 @@ import Testimonial from '../../components/testimonial'
 import BlogSection from '../../components/BlogSection'
 import Footer from '../../components/footer'
 import { usedTools } from '../../Dashboard/dashboard';
+import { clients } from '../../Dashboard/dashboard';
+import { partners } from '../../Dashboard/dashboard';
 
 
 const HomePage =() => {
@@ -20,7 +22,7 @@ const HomePage =() => {
             <About/>
             <ServiceSection/>
             <Tour/>
-            <Partners usedTools={usedTools}/>
+            <Partners usedTools={usedTools}  clients={clients} partners={partners}/>
             <ProjectSection/>
             <Testimonial/>
             {/* <BlogSection/> */}
