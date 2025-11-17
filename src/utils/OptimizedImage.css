@@ -1,0 +1,49 @@
+.optimized-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.optimized-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.optimized-image.loading {
+  opacity: 0;
+}
+
+.optimized-image.loaded {
+  opacity: 1;
+}
+
+.optimized-image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px);
+  transform: scale(1.1);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.optimized-image.error {
+  opacity: 0.5;
+  background-color: #f0f0f0;
+}
+
+.optimized-image.compressing {
+  opacity: 0.7;
+}
+
+/* Prevent layout shift */
+.optimized-image-wrapper img {
+  display: block;
+}
+

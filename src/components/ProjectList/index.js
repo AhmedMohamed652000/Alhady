@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import projectImg1 from "../../img/project-4.jpg";
 import projectImg2 from "../../img/project-5.jpg";
@@ -36,7 +37,7 @@ const ProjectList = () => {
                   <div className="col-md-5  col-sm-6">
                     <div className="project-box">
                       <Link to={`/project-details/${ourProject.id}`}>
-                        <img src={ourProject?.homeCardImage} alt="img" />
+                        <OptimizedImage src={ourProject?.homeCardImage} alt="img" />
                         <h3>
                           {ourProject?.title}
                         </h3>

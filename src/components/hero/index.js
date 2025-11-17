@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import VideoModal from "../../components/ModalVideo";
+import OptimizedBackground from "../../utils/OptimizedBackground";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import hero1 from "../../img/slider-1.jpg";
-import hero2 from "../../img/slider-2.png";
 
 import "./style.css";
 import { sliderServices } from "../../Dashboard/dashboard";
@@ -25,7 +24,7 @@ class Hero extends Component {
   }
 
   render() {
-    var settings = {
+    const settings = {
       dots: false,
       arrows: false,
       speed: 1200,
@@ -75,10 +74,20 @@ class Hero extends Component {
           <Slider ref={(c) => (this.slider = c)} {...settings}>
             {
               sliderServices?.map((service) => {
-                return <div className="slide">
-                  <div
+                // Use public folder path for images
+                const imagePath = service?.sliderImage 
+                  ? `/img/${service.sliderImage}`
+                  : null;
+                
+                if (!imagePath) return null;
+                
+                return <div className="slide" key={service?.id || Math.random()}>
+                  <OptimizedBackground
                     className="hero-slide-item"
-                    style={{ backgroundImage: `url(../../img/${service?.sliderImage})` }}
+                    imageSrc={imagePath}
+                    quality={0.75}
+                    maxWidth={1920}
+                    maxHeight={1080}
                   >
                     <div className="container">
                       <div className="hero-text">
@@ -105,7 +114,7 @@ class Hero extends Component {
                         <VideoModal videoId="BqI0Q7e4kbk" />
                       </div>
                     </div>
-                  </div>
+                  </OptimizedBackground>
                 </div>
               })
             }

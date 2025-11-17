@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Accordion } from "react-bootstrap";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import Img1 from "../../img/faq-1.jpg";
 import Img2 from "../../img/faq-2.jpg";
@@ -78,10 +79,10 @@ class Faq extends Component {
               <div className="col-md-6">
                 <div className="faq-img" data-aos="fade-up">
                   <div className="faq-img-one">
-                    <img src={Img1} alt="img" />
+                    <OptimizedImage src={Img1} alt="img" />
                   </div>
                   <div className="faq-img-two">
-                    <img src={Img2} alt="img" />
+                    <OptimizedImage src={Img2} alt="img" />
                   </div>
                 </div>
               </div>
@@ -101,7 +102,7 @@ class Faq extends Component {
             <div className="row justify-content-center">
               <div className="col-lg-4 col-sm-6">
                 <div className="faq-support-box" data-aos="fade-up">
-                  <img src={Img3} alt="icon" />
+                  <OptimizedImage src={Img3} alt="icon" />
                   <h3>Outsalting Support</h3>
                   <p>
                     Information architecture helps organize content overall so
@@ -109,7 +110,7 @@ class Faq extends Component {
                     brim with things … let’s say these things.
                   </p>
                   <div className="faq-support-text">
-                    <img src={Icon} alt="icon" />
+                    <OptimizedImage src={Icon} alt="icon" />
                     <p>
                       <span>Hot line:</span>123 4567 89
                     </p>
@@ -121,7 +122,7 @@ class Faq extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <div className="faq-support-box" data-aos="fade-up">
-                  <img src={Img4} alt="icon" />
+                  <OptimizedImage src={Img4} alt="icon" />
                   <h3>Community</h3>
                   <p>
                     Information architecture helps organize content overall so
@@ -129,7 +130,7 @@ class Faq extends Component {
                     brim with things … let’s say these things.
                   </p>
                   <div className="faq-support-text">
-                    <img src={Icon} alt="icon" />
+                    <OptimizedImage src={Icon} alt="icon" />
                     <p>
                       <span>Hot line:</span>123 4567 89
                     </p>
@@ -141,7 +142,7 @@ class Faq extends Component {
               </div>
               <div className="col-lg-4 col-sm-6">
                 <div className="faq-support-box" data-aos="fade-up">
-                  <img src={Img5} alt="icon" />
+                  <OptimizedImage src={Img5} alt="icon" />
                   <h3>News &amp; Updates</h3>
                   <p>
                     Information architecture helps organize content overall so
@@ -149,7 +150,7 @@ class Faq extends Component {
                     brim with things … let’s say these things.
                   </p>
                   <div className="faq-support-text">
-                    <img src={Icon} alt="icon" />
+                    <OptimizedImage src={Icon} alt="icon" />
                     <p>
                       <span>Hot line:</span>123 4567 89
                     </p>

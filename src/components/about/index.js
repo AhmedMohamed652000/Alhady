@@ -1,5 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import bg from "../../img/about_background.png";
 import img1 from "../../img/about-1-1.png";
@@ -72,8 +73,8 @@ const About = () => {
 
             </div>
             <div className="about-right" data-aos="fade-left">
-              <img className="about_img_1" src={img2} alt="img" />
-              <img className="about_img_2" src={img1} alt="img" />
+              <OptimizedImage className="about_img_1" src={img2} alt="img" />
+              <OptimizedImage className="about_img_2" src={img1} alt="img" />
             </div>
           </div>
         </div>

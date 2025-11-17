@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import serviceImg1 from "../../img/service-bg-1.png";
 import serviceImg2 from "../../img/service-bg-2.jpg";
@@ -26,7 +27,7 @@ const ServiceList = () => {
                     data-aos-delay="100"
                   >
                     <div className="service-icon">
-                      <img src={service?.icon} alt="img" />
+                      <OptimizedImage src={service?.icon} alt="img" />
                     </div>
                     <div className="service-text">
                       <h3>{service?.title}</h3>
@@ -37,7 +38,7 @@ const ServiceList = () => {
                         Contact Us
                       </Link>
                     </div>
-                    <img src={service?.cardImage} alt="img" />
+                    <OptimizedImage src={service?.cardImage} alt="img" />
                   </div>
                 </div>
               );

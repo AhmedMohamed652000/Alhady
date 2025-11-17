@@ -1,5 +1,6 @@
 import React from "react";
 import VideoModal from "../../components/ModalVideo";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import tourBG from "../../img/tour-img1.png";
 
@@ -20,7 +21,7 @@ const Tour = () => {
         <div className="row">
           <div className="col-md-11 mx-auto">
             <div className="tour-inn" data-aos="fade-up">
-              <img src={tourBG} alt="img" />
+              <OptimizedImage src={tourBG} alt="img" />
               <div className="video-main">
                 <div className="tour_video_waves">
                   <div className="promo-video">

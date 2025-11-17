@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import serviceImg1 from "../../img/service-bg-1.png";
 import serviceImg2 from "../../img/service-bg-2.jpg";
@@ -50,7 +51,7 @@ const ServiceSection = () => {
           {[sliderServices[0], sliderServices[1], sliderServices[2]]?.map((service) => {
             return <div className="service-box" data-aos="fade-up" data-aos-delay="100">
               <div className="service-icon">
-                <img style={{ margin: 'auto' }} src={service?.icon} alt={service?.title} />
+                <OptimizedImage style={{ margin: 'auto' }} src={service?.icon} alt={service?.title} />
               </div>
               <div className="service-text">
                 <h3>{service?.title}</h3>
@@ -61,7 +62,7 @@ const ServiceSection = () => {
                   Contact Us
                 </Link>
               </div>
-              <img src={service?.cardImage} alt="Interior Design" />
+              <OptimizedImage src={service?.cardImage} alt="Interior Design" />
             </div>
           })
           }

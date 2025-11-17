@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import OptimizedImage from "../../utils/OptimizedImage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -88,11 +89,11 @@ class Testimonial extends Component {
                       <div key={index} className="slide">
                         <div className="single-testimonial">
                           <div className="testimonial-text">
-                            <img src={icon} alt="icon" />
+                            <OptimizedImage src={icon} alt="icon" lazy={false} />
                             <p>{review.description}</p>
                           </div>
                           <div className="testimonial-meta">
-                            <img src={review.image} alt="img" />
+                            <OptimizedImage src={review.image} alt="img" />
                             <div className="testimonial-author">
                               <h4>{review.name}</h4>
                               <p>{review.jobTitle}</p>

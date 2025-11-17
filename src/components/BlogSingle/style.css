@@ -92,7 +92,7 @@
 
 .blog-info p i {
 	margin-right: 10px;
-	color: #347cb8
+	color: var(--primary-color)
 }
 
 .blog-info-date {
@@ -196,7 +196,7 @@
 
 .blog-comment-date p i {
 	margin-right: 10px;
-	color: #347cb8
+	color: var(--primary-color)
 }
 
 .blog-leave-comment {

@@ -74,7 +74,7 @@
 }
 
 .hero-social ul li a:hover {
-	color: #347cb8
+	color: var(--primary-color)
 }
 
 .hero-social p {
@@ -140,8 +140,8 @@
 }
 
 .hero-text .btn-border:hover {
-	background: #347cb8 none repeat scroll 0 0 !important;
-	border-color: #347cb8
+	background: var(--primary-color) none repeat scroll 0 0 !important;
+	border-color: var(--primary-color)
 }
 
 .hero-slide-item .video-main {
@@ -162,7 +162,7 @@
 	text-align: center;
 	border-radius: 100%;
 	background: transparent;
-	color: #347cb8;
+	color: var(--primary-color);
 	display: inline-block;
 	background: #fff;
 	z-index: 999;

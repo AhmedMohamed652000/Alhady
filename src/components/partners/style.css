@@ -40,12 +40,12 @@
 }
 
 .noActive {
-	color: #2E6396 !important;
+	color: var(--primary-color) !important;
 	font-size:20px !important;
 	margin: 10px 0px 0px 0px;
 }
 
 .nav-item .active {
 	color: white !important;
-	background-color: #2E6396 !important;
+	background-color: var(--primary-color) !important;
 }

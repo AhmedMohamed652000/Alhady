@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import Img1 from "../../img/post-1.jpg";
 import Img2 from "../../img/post-2.jpg";
@@ -59,7 +60,7 @@ const Sidebar = () => {
         </div>
         <div className="sidebar-post-box" data-aos="fade-up">
           <div className="sidebar-post-img">
-            <img src={Img1} alt="img" />
+            <OptimizedImage src={Img1} alt="img" />
           </div>
           <div className="sidebar-post-text">
             <p>Jan 06 2021</p>
@@ -70,7 +71,7 @@ const Sidebar = () => {
         </div>
         <div className="sidebar-post-box">
           <div className="sidebar-post-img">
-            <img src={Img2} alt="img" />
+            <OptimizedImage src={Img2} alt="img" />
           </div>
           <div className="sidebar-post-text">
             <p>Jan 06 2021</p>
@@ -81,7 +82,7 @@ const Sidebar = () => {
         </div>
         <div className="sidebar-post-box">
           <div className="sidebar-post-img">
-            <img src={Img3} alt="img" />
+            <OptimizedImage src={Img3} alt="img" />
           </div>
           <div className="sidebar-post-text">
             <p>Jan 06 2021</p>
@@ -92,7 +93,7 @@ const Sidebar = () => {
         </div>
         <div className="sidebar-post-box">
           <div className="sidebar-post-img">
-            <img src={Img4} alt="img" />
+            <OptimizedImage src={Img4} alt="img" />
           </div>
           <div className="sidebar-post-text">
             <p>Jan 06 2021</p>
@@ -103,7 +104,7 @@ const Sidebar = () => {
         </div>
         <div className="sidebar-post-box">
           <div className="sidebar-post-img">
-            <img src={Img5} alt="img" />
+            <OptimizedImage src={Img5} alt="img" />
           </div>
           <div className="sidebar-post-text">
             <p>Jan 06 2021</p>
@@ -171,31 +172,31 @@ const Sidebar = () => {
           </div>
           <ul>
             <li>
-              <img src={Img1} alt="img" />
+              <OptimizedImage src={Img1} alt="img" />
             </li>
             <li>
-              <img src={Img2} alt="img" />
+              <OptimizedImage src={Img2} alt="img" />
             </li>
             <li>
-              <img src={Img3} alt="img" />
+              <OptimizedImage src={Img3} alt="img" />
             </li>
             <li>
-              <img src={Img4} alt="img" />
+              <OptimizedImage src={Img4} alt="img" />
             </li>
             <li>
-              <img src={Img5} alt="img" />
+              <OptimizedImage src={Img5} alt="img" />
             </li>
             <li>
-              <img src={Img1} alt="img" />
+              <OptimizedImage src={Img1} alt="img" />
             </li>
             <li>
-              <img src={Img2} alt="img" />
+              <OptimizedImage src={Img2} alt="img" />
             </li>
             <li>
-              <img src={Img3} alt="img" />
+              <OptimizedImage src={Img3} alt="img" />
             </li>
             <li>
-              <img src={Img4} alt="img" />
+              <OptimizedImage src={Img4} alt="img" />
             </li>
           </ul>
         </div>

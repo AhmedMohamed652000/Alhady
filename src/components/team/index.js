@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import team1 from "../../img/team-1.jpg";
 import team2 from "../../img/team-2.jpg";
@@ -31,7 +32,7 @@ const Team = () => {
                   <div key={ourTeam.id} className="col-md-4 col-sm-6">
                     <div className="single-team-box">
                       <div className="team-image">
-                        <img src={ourTeam.profileImage} alt="team" />
+                        <OptimizedImage src={ourTeam.profileImage} alt="team" />
                         <div className="team-meta">
                           <h4>{ourTeam.Name}</h4>
                           <p>{ourTeam.Position}</p>

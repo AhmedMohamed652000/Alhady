@@ -1,4 +1,5 @@
 import React from "react";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import Img1 from "../../img/portfolio-1.jpg";
 import Img2 from "../../img/portfolio-2.jpg";
@@ -19,7 +20,7 @@ const Portfolio = () => {
             <div className="col-md-4 col-sm-6 no-paading">
               <div className="portfolio-box">
                 <div className="portfolio-img">
-                  <img src={portfolio?.cardImage} alt="portfolio img" />
+                  <OptimizedImage src={portfolio?.cardImage} alt="portfolio img" />
                 </div>
                 <div className="portfolio-text text-center">
                   <h2 className="h4">{portfolio?.serviceCagegory}</h2>

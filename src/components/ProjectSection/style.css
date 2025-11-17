@@ -68,7 +68,7 @@
 	height: 70px;
 	line-height: 70px;
 	text-align: center;
-	background: #347cb8;
+	background: var(--primary-color);
 	border-radius: 50%;
 	-webkit-transition: all 0.4s ease 0s;
 	transition: all 0.4s ease 0s

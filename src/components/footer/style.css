@@ -37,7 +37,7 @@
 }
 
 .footer-contact i {
-	color: #347cb8;
+	color: var(--primary-color);
 	margin-right: 5px
 }
 

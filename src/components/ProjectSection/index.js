@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import projectImg1 from "../../img/project-1.png";
 import projectImg2 from "../../img/project-2.png";
@@ -20,7 +21,7 @@ const ProjectSection = () => {
             </div>
             <div className="project-box" data-aos="fade-up">
               <Link to={`/project-details/${ourProjects[0]?.id}`}>
-                <img src={ourProjects[0]?.homeCardImage} alt="img" />
+                <OptimizedImage src={ourProjects[0]?.homeCardImage} alt="img" />
                 <h3>
                   {ourProjects[0]?.title}
                 </h3>
@@ -56,7 +57,7 @@ const ProjectSection = () => {
           <div className="col-sm-6">
             <div className="project-box" data-aos="fade-up">
               <Link to={`/project-details/${ourProjects[1]?.id}`}>
-                <img src={ourProjects[1]?.homeCardImage} alt="img" />
+                <OptimizedImage src={ourProjects[1]?.homeCardImage} alt="img" />
                 <h3>
                   {ourProjects[1]?.title}
                 </h3>
@@ -85,7 +86,7 @@ const ProjectSection = () => {
             </div>
             <div className="project-box" data-aos="fade-up">
               <Link to={`/project-details/${ourProjects[2]?.id}`}>
-                <img src={ourProjects[2]?.homeCardImage} alt="img" />
+                <OptimizedImage src={ourProjects[2]?.homeCardImage} alt="img" />
                 <h3>
                   {ourProjects[2]?.title}
                 </h3>

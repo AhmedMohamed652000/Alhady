@@ -32,7 +32,7 @@
 }
 
 .pricing-header .price {
-	color: #347cb8;
+	color: var(--primary-color);
 	font-weight: 500;
 	font-size: 20px
 }
@@ -55,7 +55,7 @@
 }
 
 .pricing-content ul li p i {
-	color: #347cb8;
+	color: var(--primary-color);
 	margin-right: 10px
 }
 
@@ -66,7 +66,7 @@
 
 .pricing-action a {
 	display: inline-block;
-	border-bottom: 1px solid #347cb8;
+	border-bottom: 1px solid var(--primary-color);
 	font-weight: 700;
 	font-size: 18px
 }

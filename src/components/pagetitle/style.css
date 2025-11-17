@@ -74,7 +74,7 @@
 	height: 30px;
 	text-align: center;
 	line-height: 33px;
-	border: 1px solid #347cb8;
+	border: 1px solid var(--primary-color);
 	font-size: 16px;
 }
 

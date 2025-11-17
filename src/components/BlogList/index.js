@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import blog1 from "../../img/news-1.png";
 import blog2 from "../../img/news-2.png";
@@ -22,7 +23,7 @@ const BlogList = () => {
                     data-aos="fade-up"
                   >
                     <div className="news-img">
-                      <img src={blog1} alt="img" />
+                      <OptimizedImage src={blog1} alt="img" />
                     </div>
                     <div className="news-text">
                       <p className="news-date">Planning - 21.04.2020</p>
@@ -37,7 +38,7 @@ const BlogList = () => {
                     data-aos="fade-up"
                   >
                     <div className="news-img">
-                      <img src={blog2} alt="img" />
+                      <OptimizedImage src={blog2} alt="img" />
                     </div>
                     <div className="news-text">
                       <p className="news-date">Planning - 20.04.2020</p>
@@ -52,7 +53,7 @@ const BlogList = () => {
                     data-aos="fade-up"
                   >
                     <div className="news-img">
-                      <img src={blog1} alt="img" />
+                      <OptimizedImage src={blog1} alt="img" />
                     </div>
                     <div className="news-text">
                       <p className="news-date">Planning - 19.04.2020</p>

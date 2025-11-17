@@ -62,7 +62,7 @@
 }
 .tetimonial-slider .slick-dots li.slick-active button:before{
 	opacity: 1;
-	color: #347cb8;
+	color: var(--primary-color);
 }
 .tetimonial-slider .slick-dots{
 	position: inherit;

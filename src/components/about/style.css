@@ -68,7 +68,7 @@
 .signature-left {
 	margin-right: 10px;
 	padding-right: 10px;
-	border-right: 2px solid #347cb8;
+	border-right: 2px solid var(--primary-color);
 }
 
 .signature-right h3 {

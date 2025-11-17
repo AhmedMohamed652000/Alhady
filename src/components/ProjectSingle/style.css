@@ -134,7 +134,7 @@
 
 .project-overview-box p {
 	font-weight: 500;
-	color: #347cb8;
+	color: var(--primary-color);
 	font-size: 18px
 }
 /*Responsive*/

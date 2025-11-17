@@ -1,4 +1,5 @@
 import React from "react";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import Icon1 from "../../img/vision.png";
 import Icon2 from "../../img/mission.png";
@@ -27,7 +28,7 @@ const Feature = () => {
             <div className="about-left">
               <div className="single-about-listing">
                 <div className="about-icon">
-                  <img src={Icon1} alt="icon" />
+                  <OptimizedImage src={Icon1} alt="icon" />
                 </div>
                 <div className="about-text">
                   <h3>Our Vision</h3>
@@ -42,7 +43,7 @@ const Feature = () => {
                 data-wow-delay="0.5s"
               >
                 <div className="about-icon">
-                  <img src={Icon2} alt="icon" />
+                  <OptimizedImage src={Icon2} alt="icon" />
                 </div>
                 <div className="about-text">
                   <h3>Our Mission</h3>
@@ -57,10 +58,10 @@ const Feature = () => {
           <div className="col-md-6">
             <div className="about-right">
               <div className="single-about-image">
-                <img src={img1} alt="img" />
+                <OptimizedImage src={img1} alt="img" />
               </div>
               <div className="single-about-image">
-                <img src={img2} alt="img" />
+                <OptimizedImage src={img2} alt="img" />
               </div>
             </div>
           </div>

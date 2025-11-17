@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar";
+import OptimizedImage from "../../utils/OptimizedImage";
 
 import blog1 from "../../img/news-1.png";
 import blog2 from "../../img/news-2.png";
@@ -24,7 +25,7 @@ const BlogSingle = () => {
               <div className="row">
                 <div className="col-lg-12">
                   <div className="news-img">
-                    <img src={blog1} alt="img" />
+                    <OptimizedImage src={blog1} alt="img" />
                   </div>
                 </div>
               </div>
@@ -32,7 +33,7 @@ const BlogSingle = () => {
                 <div className="blog-info">
                   <div className="b_info_flex">
                     <div className="blog-info-img">
-                      <img src={Img1} alt="img" />
+                      <OptimizedImage src={Img1} alt="img" />
                     </div>
                     <div className="blog-info-date">
                       <p>
@@ -121,7 +122,7 @@ const BlogSingle = () => {
                   <div className="col-lg-6">
                     <Link to="/blog-single" className="news-box">
                       <div className="news-img">
-                        <img src={blog1} alt="img" />
+                        <OptimizedImage src={blog1} alt="img" />
                       </div>
                       <div className="news-text">
                         <p className="news-date">Planning - 21.04.2020</p>
@@ -132,7 +133,7 @@ const BlogSingle = () => {
                   <div className="col-lg-6">
                     <Link to="/blog-single" className="news-box">
                       <div className="news-img">
-                        <img src={blog2} alt="img" />
+                        <OptimizedImage src={blog2} alt="img" />
                       </div>
                       <div className="news-text">
                         <p className="news-date">Planning - 20.04.2020</p>
@@ -148,7 +149,7 @@ const BlogSingle = () => {
                 </h3>
                 <div className="blog-comment-box">
                   <div className="blog-comment-people">
-                    <img src={Img1} alt="img" />
+                    <OptimizedImage src={Img1} alt="img" />
                   </div>
                   <div className="blog-comment-text">
                     <div className="blog-comment-date">
@@ -168,7 +169,7 @@ const BlogSingle = () => {
                 </div>
                 <div className="blog-comment-box blog-replay-box">
                   <div className="blog-comment-people">
-                    <img src={Img2} alt="img" />
+                    <OptimizedImage src={Img2} alt="img" />
                   </div>
                   <div className="blog-comment-text">
                     <div className="blog-comment-date">
@@ -188,7 +189,7 @@ const BlogSingle = () => {
                 </div>
                 <div className="blog-comment-box">
                   <div className="blog-comment-people">
-                    <img src={Img3} alt="img" />
+                    <OptimizedImage src={Img3} alt="img" />
                   </div>
                   <div className="blog-comment-text">
                     <div className="blog-comment-date">

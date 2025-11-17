@@ -24,7 +24,7 @@
 }
 
 .sidebar-post-text h5:hover {
-	color: #347cb8
+	color: var(--primary-color)
 }
 
 .sidebar-post-text p {
@@ -59,7 +59,7 @@
 }
 
 .sidebar-content a:hover {
-	color: #347cb8
+	color: var(--primary-color)
 }
 
 .sidebar-content a span {

@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min';  // Import Bootstrap JS
+import OptimizedImage from "../../utils/OptimizedImage";
 import './style.css'
 const Partners = ({ usedTools, clients, partners }) => {
   const settings = {
@@ -61,7 +62,7 @@ const Partners = ({ usedTools, clients, partners }) => {
           <Slider {...settings}>
             {usedTools?.map((tool, index) => (
               <div key={index}>
-                <img src={tool.icon} alt={tool.title} style={{ width: 200, height: 200, margin: "auto" }} />
+                <OptimizedImage src={tool.icon} alt={tool.title} style={{ width: 200, height: 200, margin: "auto" }} />
               </div>
             ))}
           </Slider>
@@ -70,7 +71,7 @@ const Partners = ({ usedTools, clients, partners }) => {
           <Slider {...settings}>
             {clients?.map((client, index) => (
               <div key={index}>
-                <img src={client.icon} alt={client.title} style={{ width: 250, height: 200, margin: "auto" }} />
+                <OptimizedImage src={client.icon} alt={client.title} style={{ width: 250, height: 200, margin: "auto" }} />
               </div>
             ))}
           </Slider>
@@ -79,7 +80,7 @@ const Partners = ({ usedTools, clients, partners }) => {
           <Slider {...{settings, slidesToShow:1}}>
             {partners?.map((partner, index) => (
               <div key={index}>
-                <img src={partner.icon} alt={partner.title} style={{ width: 350, height: 200, margin: "auto" }} />
+                <OptimizedImage src={partner.icon} alt={partner.title} style={{ width: 350, height: 200, margin: "auto" }} />
               </div>
             ))}
           </Slider>
