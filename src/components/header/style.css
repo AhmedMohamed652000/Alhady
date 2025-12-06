@@ -14,7 +14,7 @@
 	left: 0;
 	width: 100%;
 	height: 100px;
-	background: #fff;
+	background: #000;
 	content: "";
 	z-index: -1;
 }
@@ -51,8 +51,8 @@
 }
 
 .site-logo a {
-	padding: 35px 25px;
-	background: #fff;
+	padding: 15px 0px;
+	background: #000;
 	width: 195px;
 	display: inline-block;
 }
@@ -87,16 +87,15 @@
 
 .mainmenu ul li a {
 	font-weight: 500;
-	color: #000;
 	text-transform: uppercase;
 	display: block;
 	padding: 38px 0;
 	position: relative;
-	background: -webkit-linear-gradient(left, var(--primary-color), var(--primary-color) 50%, #000 50%);
-	background: linear-gradient(to right, var(--primary-color), var(--primary-color) 50%, #000 50%);
-	background-clip: text;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	background-clip: text;
 	background-size: 200% 100%;
 	background-position: 100%;
 }
@@ -129,7 +128,8 @@
 	top: 120%;
 	left: 0;
 	width: 200px;
-	background: #fff;
+	background: #1a1a1a;
+	border: 1px solid #333;
 	padding: 0;
 	-webkit-transition: all 0.4s ease 0s;
 	transition: all 0.4s ease 0s;
@@ -148,7 +148,7 @@
 .mainmenu ul li ul li {
 	margin: 0;
 	display: block;
-	border-top: 1px solid #eee
+	border-top: 1px solid #333
 }
 
 .mainmenu ul li ul li a {
@@ -161,13 +161,16 @@
 .header-btn {
 	display: inline-block;
 	padding: 16px 25px 16px 40px;
-	background: #fff none repeat scroll 0 0;
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%) none repeat scroll 0 0 !important;
 	border-radius: 5px;
 	text-transform: capitalize;
 	font-weight: 500;
 	margin-left: 35px;
 	position: relative;
-	color: var(--primary-color)
+	color: #000 !important;
+	-webkit-text-fill-color: #000 !important;
+	-webkit-background-clip: unset !important;
+	background-clip: unset !important;
 }
 
 .header-btn>div {
@@ -178,44 +181,76 @@
 	transform: translateY(-50%);
 	width: 40px;
 	height: 40px;
-	background: var(--primary-color);
+	background: #1a1a1a !important;
 	text-align: center;
-	color: var(--primary-color);
-	border-radius: 5px;
+	color: #000;
+	border-radius: 8px;
 	line-height: 40px;
 	z-index: 1;
+	border: 2px solid #D4AF37;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.header-btn:hover>div {
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%) !important;
+	border-color: #FFD700;
+	box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+	transform: translateY(-50%) scale(1.05);
 }
 
 .header-btn>div i {
-	background: #fff;
+	background: transparent !important;
+	color: #D4AF37 !important;
+	-webkit-text-fill-color: #D4AF37 !important;
+	background-clip: unset !important;
+	-webkit-background-clip: unset !important;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	padding: 8px;
-	border-radius: 5px;
+	padding: 0;
+	border-radius: 0;
+	font-size: 18px !important;
+	display: inline-block !important;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.header-btn:hover>div i {
+	color: #000 !important;
+	-webkit-text-fill-color: #000 !important;
 }
 
 .header-btn>div:after {
-	position: absolute;
-	content: "";
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border: 4px solid var(--primary-color);
-	z-index: -1;
-	border-radius: 5px;
+	display: none;
 }
 
 .search-toggle {
-	color: #fff;
-	padding: 10px
+	color: #000 !important;
+	-webkit-text-fill-color: #000 !important;
+	background: none !important;
+	-webkit-background-clip: unset !important;
+	background-clip: unset !important;
+	padding: 10px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.search-toggle i {
+	color: #000 !important;
+	-webkit-text-fill-color: #000 !important;
+	background: none !important;
+	-webkit-background-clip: unset !important;
+	background-clip: unset !important;
 }
 
 .search-toggle:hover {
-	color: #000
+	color: #000 !important;
+	-webkit-text-fill-color: #000 !important;
+	opacity: 0.7;
 }
 
 #search-overlay {
@@ -284,7 +319,11 @@
 	height: 100%;
 	width: auto;
 	font-size: 18px;
-	color: #fff;
+	color: #000 !important;
+	-webkit-text-fill-color: #000 !important;
+	background: none !important;
+	-webkit-background-clip: unset !important;
+	background-clip: unset !important;
 	font-weight: 600;
 	text-align: center;
 	line-height: 42px;
@@ -292,6 +331,14 @@
 	background-color: transparent;
 	border-radius: 0 2px 2px 0;
 	cursor: pointer;
+}
+
+#search-button i {
+	color: #000 !important;
+	-webkit-text-fill-color: #000 !important;
+	background: none !important;
+	-webkit-background-clip: unset !important;
+	background-clip: unset !important;
 }
 
 #close-btn {

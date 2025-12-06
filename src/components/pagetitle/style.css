@@ -29,26 +29,34 @@
 }
 
 .breadcrumb-inn h1 {
-	color: #fff;
 	font-size: 75px;
 	letter-spacing: 6px;
 	text-transform: uppercase;
 	font-weight: 600;
 	line-height: 65px;
 	margin-bottom: 15px;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .breadcrumb-inn ul li {
 	list-style: none;
 	position: relative;
 	display: inline-block;
-	color: #fff;
 	padding-right: 45px;
 	margin-right: 10px;
 	text-transform: capitalize;
 	font-family: 'Teko', sans-serif;
 	letter-spacing: 3px;
 	font-size: 22px;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .breadcrumb-inn ul li:last-child {
@@ -68,14 +76,18 @@
 }
 
 .breadcrumb-inn ul li a {
-	color: #fff;
 	display: block;
 	width: 30px;
 	height: 30px;
 	text-align: center;
 	line-height: 33px;
-	border: 1px solid var(--primary-color);
+	border: 1px solid #D4AF37;
 	font-size: 16px;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 /*Responsive*/

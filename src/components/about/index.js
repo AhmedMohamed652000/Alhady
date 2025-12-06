@@ -34,7 +34,7 @@ const About = () => {
                   <a
                     href="/El Hady Office Brochure.pdf"
                     download
-                    style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+                    style={{ cursor: 'pointer', textDecoration: 'none' }}
                   >
                     Download Brochure
                   </a>

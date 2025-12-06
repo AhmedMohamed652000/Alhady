@@ -65,10 +65,10 @@ class Hero extends Component {
         <div className="hero-slider">
           <div className="hero_arrows">
             <button className="button text-white border-white" onClick={this.previous}>
-              <i className="fas fa-angle-left text-white border-white" style={{color:'#FFF'}}></i>
+              <i className="fas fa-angle-left"></i>
             </button>
-            <button className="button text-white" style={{border:'1px solid #FFF !important'}} onClick={this.next}>
-              <i className="fas fa-angle-right text-white"></i>
+            <button className="button text-white border-white" onClick={this.next}>
+              <i className="fas fa-angle-right"></i>
             </button>
           </div>
           <Slider ref={(c) => (this.slider = c)} {...settings}>

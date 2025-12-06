@@ -12,16 +12,25 @@
 
 .accordion-button {
 	font-size: 25px;
-	background: #fff;
-	color: #111
+	background-color: #1a1a1a;
+	border: 1px solid #333;
+	/* Gold gradient text */
+	background-image: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .accordion-button:not(.collapsed) {
-	color: #111;
-	background-color: #fff;
+	background-color: #1a1a1a;
 	box-shadow: none;
-	border: none;
+	border: 1px solid #333;
 	font-size: 25px;
+	/* Gold gradient text */
+	background-image: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .accordion-button:not(.collapsed):after {
@@ -52,16 +61,18 @@
 
 .accordion-button:focus {
 	z-index: 3;
-	border-color: #fff;
-	outline: 0;
-	box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+	border-color: #D4AF37;
 	outline: none;
-	box-shadow: 0 0 0 0 rgb(13 110 253 / 25%) !important
+	box-shadow: 0 0 0 0 rgb(212 175 55 / 25%) !important
 }
 
 .accordion-body {
-	color: #fff;
 	letter-spacing: 2px;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .faq-img {
@@ -91,7 +102,9 @@
 	text-align: center;
 	padding: 20px;
 	position: relative;
-	box-shadow: 0 3px 30px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 3px 30px rgba(212, 175, 55, 0.1);
+	background: #1a1a1a;
+	border: 1px solid #333;
 	margin-top: 30px
 }
 
@@ -133,7 +146,11 @@
 .faq-support-text p {
 	margin-top: 10px;
 	font-weight: 500;
-	color: #ddd
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .faq-support-text p span {

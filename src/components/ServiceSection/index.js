@@ -22,6 +22,8 @@ const ServiceSection = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    centerMode: false,
+    variableWidth: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -48,8 +50,8 @@ const ServiceSection = () => {
           <h2 className="section-title">Our Services </h2>
         </div>
         <Slider {...settings}>
-          {[sliderServices[0], sliderServices[1], sliderServices[2]]?.map((service) => {
-            return <div className="service-box" data-aos="fade-up" data-aos-delay="100">
+          {[sliderServices[0], sliderServices[1], sliderServices[2]]?.map((service, index) => {
+            return <div key={service?.id || index} className="service-box" data-aos="fade-up" data-aos-delay="100">
               <div className="service-icon">
                 <OptimizedImage style={{ margin: 'auto' }} src={service?.icon} alt={service?.title} />
               </div>

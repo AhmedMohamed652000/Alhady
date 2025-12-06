@@ -30,12 +30,16 @@
 
 .counter-box p {
 	line-height: 24px;
-	color: #4a4a4a;
 	font-weight: 600;
 	text-transform: capitalize;
 	font-size: 16px;
 	letter-spacing: 2px;
 	margin: 0;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .about-right {
@@ -71,13 +75,26 @@
 	border-right: 2px solid var(--primary-color);
 }
 
+.signature-left a {
+	color: #000 !important;
+	-webkit-text-fill-color: #000 !important;
+	background: none !important;
+	-webkit-background-clip: unset !important;
+	background-clip: unset !important;
+	text-decoration: none !important;
+}
+
 .signature-right h3 {
-	color: #000;
 	font-size: 26px;
 	text-transform: capitalize;
 	margin-bottom: 0;
 	letter-spacing: 2px;
 	font-weight: 500;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .signature-right p {

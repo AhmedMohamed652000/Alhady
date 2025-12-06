@@ -1,6 +1,6 @@
 /* ===================== TESTIMONIAL ======================*/
 .testimonial-area {
-	background: rgba(249, 249, 249, 0.76)
+	background: rgba(0, 0, 0, 0.76)
 }
 
 .testimonial-area .site-heading {
@@ -9,7 +9,8 @@
 }
 
 .single-testimonial {
-	background: #fff;
+	background: #1a1a1a;
+	border: 1px solid #333;
 	padding: 30px;
 }
 
@@ -57,12 +58,19 @@
 .tetimonial-slider .slick-dots li button:before{
 	font-size: 12px;
 	opacity: 0.2;
-	color: #000;
-
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 .tetimonial-slider .slick-dots li.slick-active button:before{
 	opacity: 1;
-	color: var(--primary-color);
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 .tetimonial-slider .slick-dots{
 	position: inherit;

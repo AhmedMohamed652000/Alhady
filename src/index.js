@@ -5,14 +5,16 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/all.min.css';
 import App from './main-component/App/App';
 
-// Set primary color from environment variable
-const primaryColor = process.env.REACT_APP_PRIMARY_COLOR || '#347cb8';
+// Set primary color to gold gradient (matching logo)
+const primaryColor = process.env.REACT_APP_PRIMARY_COLOR || '#D4AF37';
 document.documentElement.style.setProperty('--primary-color', primaryColor);
+// Set gold gradient colors
+document.documentElement.style.setProperty('--gold-gradient-start', '#FFD700');
+document.documentElement.style.setProperty('--gold-gradient-mid', '#D4AF37');
+document.documentElement.style.setProperty('--gold-gradient-end', '#B8860B');
 
 ReactDOM.render(
-  <React.Fragment>
-    <App />
-  </React.Fragment>,
+  <App />,
   document.getElementById('root')
 );
 

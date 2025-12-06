@@ -22,23 +22,32 @@
 }
 
 .pricing-area .section-title {
-	color: #fff
+	/* Gold gradient text - already set in App.css */
 }
 
 .pricing-box {
-	background: #fff;
+	background: #1a1a1a;
+	border: 1px solid #333;
 	padding: 30px;
 	margin-top: 30px
 }
 
 .pricing-header .price {
-	color: var(--primary-color);
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 	font-weight: 500;
 	font-size: 20px
 }
 
 .pricing-header .price span {
-	color: #111
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .pricing-content ul {
@@ -51,22 +60,40 @@
 
 .pricing-content ul li p {
 	font-size: 16px;
-	color: #111
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .pricing-content ul li p i {
-	color: var(--primary-color);
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 	margin-right: 10px
 }
 
 .pricing-content .hidden-list {
 	text-decoration: line-through;
-	color: #333
+	opacity: 0.5;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .pricing-action a {
 	display: inline-block;
-	border-bottom: 1px solid var(--primary-color);
+	border-bottom: 1px solid #D4AF37;
 	font-weight: 700;
-	font-size: 18px
+	font-size: 18px;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }

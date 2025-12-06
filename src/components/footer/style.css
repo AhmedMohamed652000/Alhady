@@ -9,16 +9,24 @@
 }
 
 .single-footer h3 {
-	color: #fff;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 	margin-bottom: 20px
 }
 
 .single-footer li {
 	list-style: none;
 	margin-bottom: 10px;
-	color: #777;
 	font-weight: 500;
-	font-size: 16px
+	font-size: 16px;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .single-footer li:last-child {
@@ -27,22 +35,38 @@
 
 .single-footer a,
 .single-footer p {
-	color: #777;
 	font-weight: 500;
-	font-size: 16px
+	font-size: 16px;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .single-footer a:hover {
-	color: #fff
+	/* Gold gradient text - brighter on hover */
+	background: linear-gradient(135deg, #FFD700 0%, #FFD700 50%, #D4AF37 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .footer-contact i {
-	color: var(--primary-color);
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 	margin-right: 5px
 }
 
 .footer-contact li {
-	color: #ccc
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .newsletter_form form {
@@ -55,17 +79,21 @@
 	font-weight: 500;
 	padding: 0;
 	height: 100%;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #D4AF37;
 	position: absolute;
 	left: 0;
 	height: 100%;
 	top: 0;
 	width: 100%;
-	color: #fff
+	color: #D4AF37
 }
 
 .newsletter_form button {
-	color: #fff;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 	position: absolute;
 	right: 0;
 	top: 50%;
@@ -90,8 +118,12 @@
 
 .footer-social a {
 	display: block;
-	color: #fff;
-	font-size: 20px
+	font-size: 20px;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .newsletter_form {
@@ -114,7 +146,12 @@ ul.footer-contact {
 	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: 1px;
-	margin: 0
+	margin: 0;
+	/* Gold gradient text */
+	background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .fade_rule {

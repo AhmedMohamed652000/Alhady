@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import ScrollToTop from '../../components/ScrollToTop';
 
 import Homepage from '../HomePage'
 import AboutPage from '../AboutPage'
@@ -22,6 +23,7 @@ const AllRoute = () => {
   return (
     <div>
        <Router>
+          <ScrollToTop />
           <Switch>
             <Route exact path='/' component={Homepage}/>
             <Route path='/home' component={Homepage} />
