@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import testimonial1 from "../../img/testimonial-1.png";
 import testimonial2 from "../../img/testimonial-2.png";
 import testimonial3 from "../../img/testimonial-3.png";
-import icon from "../../img/gridicons_quote.svg";
+import icon from "../../img/gridicons_quote.png";
 
 import "./style.css";
 import { reviews } from "../../Dashboard/dashboard";
@@ -89,7 +89,7 @@ class Testimonial extends Component {
                       <div key={index} className="slide">
                         <div className="single-testimonial">
                           <div className="testimonial-text">
-                            <OptimizedImage src={icon} alt="icon" lazy={false} />
+                            <OptimizedImage src={icon} alt="icon" lazy={false} style={{ transform: 'none', marginTop: '0', width: '10%', height: 'auto' }} />
                             <p>{review.description}</p>
                           </div>
                           <div className="testimonial-meta">
