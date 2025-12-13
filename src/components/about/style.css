@@ -47,9 +47,9 @@
 }
 
 .about_img_1 {
-	position: absolute;
-	bottom: -50px;
-	left: 0;
+	position: absolute !important;
+	bottom: -50px !important;
+	left: 0 !important;
 }
 
 .about_img_2 {

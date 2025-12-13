@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../../img/logo.png";
 import MobileMenu from "../../components/MobileMenu";
 import { Link } from "react-router-dom";
 
@@ -8,6 +7,7 @@ import "./style.css";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const Logo = "/img/logo.webp";
 
   const SubmitHandler = (e) => {
     e.preventDefault();

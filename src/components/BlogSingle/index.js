@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import blog1 from "../../img/news-1.png";
-import blog2 from "../../img/news-2.png";
-import Img1 from "../../img/blpl-1.jpg";
-import Img2 from "../../img/blpl-2.jpg";
-import Img3 from "../../img/blpl-3.jpg";
-
 import "./style.css";
 
 const BlogSingle = () => {
   const SubmitHandler = (e) => {
     e.preventDefault();
   };
+
+  const blog1 = "/img/news-1_1.webp";
+  const blog2 = "/img/news-2_1.webp";
+  const Img1 = "/img/blpl-1.webp";
+  const Img2 = "/img/blpl-2.webp";
+  const Img3 = "/img/blpl-3.webp";
 
   return (
     <section className="blog-page-area">

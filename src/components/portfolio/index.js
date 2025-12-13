@@ -1,13 +1,6 @@
 import React from "react";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import Img1 from "../../img/portfolio-1.jpg";
-import Img2 from "../../img/portfolio-2.jpg";
-import Img3 from "../../img/portfolio-3.jpg";
-import Img4 from "../../img/portfolio-4.jpg";
-import Img5 from "../../img/portfolio-5.jpg";
-import Img6 from "../../img/portfolio-6.jpg";
-
 import "./style.css";
 import { portfolioData } from "../../Dashboard/dashboard";
 

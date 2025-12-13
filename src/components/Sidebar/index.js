@@ -2,15 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import Img1 from "../../img/post-1.jpg";
-import Img2 from "../../img/post-2.jpg";
-import Img3 from "../../img/post-3.jpg";
-import Img4 from "../../img/post-4.jpg";
-import Img5 from "../../img/post-5.jpg";
-
 import "./style.css";
 
 const Sidebar = () => {
+  const Img1 = "/img/post-1.webp";
+  const Img2 = "/img/post-2.webp";
+  const Img3 = "/img/post-3.webp";
+  const Img4 = "/img/post-4.webp";
+  const Img5 = "/img/post-5.webp";
   const SubmitHandler = (e) => {
     e.preventDefault();
   };

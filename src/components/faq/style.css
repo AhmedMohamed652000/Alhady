@@ -34,7 +34,6 @@
 }
 
 .accordion-button:not(.collapsed):after {
-	background-image: url(../../img/faq.png);
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
@@ -50,7 +49,6 @@
 	height: 1.25rem;
 	margin-left: auto;
 	content: "";
-	background-image: url(../../img/faq.png);
 	background-repeat: no-repeat;
 	background-size: 1.25rem;
 	-webkit-transition: -webkit-transform .2s ease-in-out;

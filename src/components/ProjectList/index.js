@@ -2,18 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import projectImg1 from "../../img/project-4.jpg";
-import projectImg2 from "../../img/project-5.jpg";
-import projectImg3 from "../../img/project-6.jpg";
-import projectImg4 from "../../img/project-7.jpg";
-import projectImg5 from "../../img/project-8.jpg";
-import projectImg6 from "../../img/project-9.jpg";
-import projectImg7 from "../../img/project-10.jpg";
-import projectImg8 from "../../img/project-11.jpg";
-import projectImg9 from "../../img/project-12.jpg";
-import projectImg10 from "../../img/project-13.jpg";
-
-
 import "./style.css";
 import { ourProjects } from "../../Dashboard/dashboard";
 

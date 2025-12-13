@@ -3,12 +3,13 @@ import ContactForm from "../ContactFrom";
 import "./style.css";
 
 const Contactpage = () => {
+  const backgroundImage = "/img/freetocontact.webp";
   return (
     <section className="contact-page-area">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-12">
-            <div className="contact-form">
+            <div className="contact-form" style={{ backgroundImage: `url(${backgroundImage})` }}>
               <div className="site-heading" data-aos="fade-up">
                 <h3 className="sub-title">Al-Hady (BIM SERVICES)</h3>
                 <h2 className="section-title">Let us know how we can add values to your Project !</h2>

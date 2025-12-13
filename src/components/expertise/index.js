@@ -1,8 +1,8 @@
 import React from "react";
-import bg from "../../img/expertise.jpg";
 import "./style.css";
 
 const Expertise = () => {
+  const bg = "/img/expertise.webp";
   return (
     <section className="expertise-area">
       <div className="expertise-bg" style={{ backgroundImage: `url(${bg})` }} />
