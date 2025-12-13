@@ -3,6 +3,7 @@
   overflow: hidden;
   display: inline-block;
   max-width: 100%;
+  background-color: #000;
 }
 
 .optimized-image {

@@ -62,7 +62,8 @@ const Partners = ({ usedTools, clients, partners }) => {
           <Slider {...settings}>
             {usedTools?.map((tool, index) => (
               <div key={index}>
-                <OptimizedImage src={tool.icon} alt={tool.title} style={{ width: 200, height: 200, margin: "auto" }} />
+                <img src={tool.icon} alt={tool.title} style={{ width: 200, height: 200, margin: "auto" }} />
+                {/* <OptimizedImage src={tool.icon} alt={tool.title} style={{ width: 200, height: 200, margin: "auto" }} /> */}
               </div>
             ))}
           </Slider>

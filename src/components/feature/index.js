@@ -5,7 +5,7 @@ import "./style.css";
 
 const Feature = () => {
   const Icon1 = "/img/vision_1_1.webp";
-  const Icon2 = "/img/mission.webp";
+  const Icon2 = "/img/mission.png";
   const img1 = "/img/about-v_1.webp";
   const img2 = "/img/about-m_1.webp";
   return (
