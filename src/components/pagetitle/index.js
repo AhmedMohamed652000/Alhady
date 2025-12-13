@@ -1,19 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-import servicebg from "../../img/services.png";
-import projectsbg from "../../img/projects.png";
-import portfoliobg from "../../img/portfoliocover.png";
-import teambg from "../../img/team.png";
-import aboutbg from "../../img/aboutus.png";
-import gettouchbg from "../../img/gettouch.png";
-
 import "./style.css";
 import { useLocation } from 'react-router-dom';
 
 const PageTitle = (props) => {
-  const location = useLocation ()
+  const location = useLocation();
+  const servicebg = "/img/services_1.webp";
+  const projectsbg = "/img/projects_1.webp";
+  const portfoliobg = "/img/portfoliocover_1.webp";
+  const teambg = "/img/team_1.webp";
+  const aboutbg = "/img/aboutus_1.webp";
+  const gettouchbg = "/img/gettouch.webp";
   return (
     <section
       className="breadcrumb-area"

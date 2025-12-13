@@ -2,19 +2,25 @@ import React, { Component } from "react";
 import { Accordion } from "react-bootstrap";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import Img1 from "../../img/faq-1.jpg";
-import Img2 from "../../img/faq-2.jpg";
-import Img3 from "../../img/support.png";
-import Img4 from "../../img/social-care.png";
-import Img5 from "../../img/newspaper.png";
-import Icon from "../../img/customer-service.png";
-
 import "./style.css";
 
 class Faq extends Component {
   render() {
+    const Img1 = "/img/faq-1.webp";
+    const Img2 = "/img/faq-2.webp";
+    const Img3 = "/img/support_1_1.webp";
+    const Img4 = "/img/social-care_1_1.webp";
+    const Img5 = "/img/newspaper_1.webp";
+    const Icon = "/img/customer-service_1.webp";
+    const faqIcon = "/img/faq_1.webp";
     return (
       <div>
+        <style>{`
+          .accordion-button:after,
+          .accordion-button:not(.collapsed):after {
+            background-image: url(${faqIcon}) !important;
+          }
+        `}</style>
         <section className="faq-page-area">
           <div className="container">
             <div className="row">

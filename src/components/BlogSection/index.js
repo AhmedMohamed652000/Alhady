@@ -2,12 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import blog1 from "../../img/news-1.png";
-import blog2 from "../../img/news-2.png";
-
 import "./style.css";
 
 const BlogSection = () => {
+  const blog1 = "/img/news-1_1.webp";
+  const blog2 = "/img/news-2_1.webp";
   return (
     <section className="latest-news-area" data-aos="fade-up">
       <div className="container">

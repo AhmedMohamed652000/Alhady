@@ -1,11 +1,11 @@
 import React from "react";
-import ServiceBg from "../../img/service-bg-1.png";
 import Pricing from "../../components/pricing";
 import Partners from "../../components/partners";
 
 import "./style.css";
 
 const ServiceSingle = () => {
+  const ServiceBg = "/img/service-bg-1_1_1.webp";
   return (
     <div>
       <section className="service-video-box-area" data-aos="fade-up">

@@ -2,10 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import projectImg1 from "../../img/project-1.png";
-import projectImg2 from "../../img/project-2.png";
-import projectImg3 from "../../img/project-3.png";
-
 import "./style.css";
 import { ourProjects } from "../../Dashboard/dashboard";
 

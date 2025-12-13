@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import pricingBG from "../../img/service-cost-bg.jpg";
-
 import "./style.css";
 
 const Pricing = () => {
+  const pricingBG = "/img/service-cost-bg.webp";
   return (
     <section
       className="pricing-area"

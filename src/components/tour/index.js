@@ -2,11 +2,10 @@ import React from "react";
 import VideoModal from "../../components/ModalVideo";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import tourBG from "../../img/tour-img1.png";
-
 import "./style.css";
 
 const Tour = () => {
+  const tourBG = "/img/tour-img1_1.webp";
   return (
     <section className="tour-area">
       <div className="container">

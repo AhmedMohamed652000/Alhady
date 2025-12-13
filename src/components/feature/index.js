@@ -1,14 +1,13 @@
 import React from "react";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import Icon1 from "../../img/vision.png";
-import Icon2 from "../../img/mission.png";
-// import Icon3 from "../../img/logo03-1.png";
-import img1 from "../../img/about-v.png";
-import img2 from "../../img/about-m.png";
 import "./style.css";
 
 const Feature = () => {
+  const Icon1 = "/img/vision_1_1.webp";
+  const Icon2 = "/img/mission.png";
+  const img1 = "/img/about-v_1.webp";
+  const img2 = "/img/about-m_1.webp";
   return (
     <section className="about-page-area">
       <div className="container">
@@ -28,7 +27,8 @@ const Feature = () => {
             <div className="about-left">
               <div className="single-about-listing">
                 <div className="about-icon">
-                  <OptimizedImage src={Icon1} alt="icon" />
+                  {/* <OptimizedImage src={Icon1} alt="icon" /> */}
+                  <img src={Icon1} alt="icon" />
                 </div>
                 <div className="about-text">
                   <h3>Our Vision</h3>
@@ -43,7 +43,8 @@ const Feature = () => {
                 data-wow-delay="0.5s"
               >
                 <div className="about-icon">
-                  <OptimizedImage src={Icon2} alt="icon" />
+                  {/* <OptimizedImage src={Icon2} alt="icon" /> */}
+                  <img src={Icon2} alt="icon" />
                 </div>
                 <div className="about-text">
                   <h3>Our Mission</h3>

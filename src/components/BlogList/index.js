@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import blog1 from "../../img/news-1.png";
-import blog2 from "../../img/news-2.png";
-
 import "./style.css";
 
 const BlogList = () => {
+  const blog1 = "/img/news-1_1.webp";
+  const blog2 = "/img/news-2_1.webp";
   return (
     <section className="blog-page-area">
       <div className="container">

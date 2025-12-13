@@ -4,11 +4,6 @@ import OptimizedImage from "../../utils/OptimizedImage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import testimonial1 from "../../img/testimonial-1.png";
-import testimonial2 from "../../img/testimonial-2.png";
-import testimonial3 from "../../img/testimonial-3.png";
-import icon from "../../img/gridicons_quote.png";
-
 import "./style.css";
 import { reviews } from "../../Dashboard/dashboard";
 
@@ -85,6 +80,7 @@ class Testimonial extends Component {
               <div className="tetimonial-slider">
                 <Slider ref={(c) => (this.slider = c)} {...settings}>
                   {reviews.map((review, index) => {
+                    const icon = "/img/gridicons_quote.webp";
                     return (
                       <div key={index} className="slide">
                         <div className="single-testimonial">

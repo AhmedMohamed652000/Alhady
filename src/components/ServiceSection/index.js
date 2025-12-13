@@ -3,13 +3,6 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import OptimizedImage from "../../utils/OptimizedImage";
 
-import serviceImg1 from "../../img/service-bg-1.png";
-import serviceImg2 from "../../img/service-bg-2.jpg";
-import serviceImg3 from "../../img/service-bg-3.jpg";
-import serviceIcon1 from "../../img/service-icon-1.png";
-import serviceIcon2 from "../../img/service-icon-2.png";
-import serviceIcon3 from "../../img/service-icon-3.png";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./style.css";
@@ -43,7 +36,7 @@ const ServiceSection = () => {
   };
 
   return (
-    <section className="service-area">
+    <section className="service-area mt-5">
       <div className="container">
         <div className="site-heading text-center mt-1">
           <h3 className="sub-title">Services</h3>
@@ -53,14 +46,15 @@ const ServiceSection = () => {
           {[sliderServices[0], sliderServices[1], sliderServices[2]]?.map((service, index) => {
             return <div key={service?.id || index} className="service-box" data-aos="fade-up" data-aos-delay="100">
               <div className="service-icon">
-                <OptimizedImage style={{ margin: 'auto' }} src={service?.icon} alt={service?.title} />
+                {/* <OptimizedImage style={{ margin: 'auto' }} src={service?.icon} alt={service?.title} /> */}
+                <img src={service?.icon} alt="img" style={{ margin: 'auto' }} />
               </div>
               <div className="service-text">
                 <h3>{service?.title}</h3>
                 <p>
                   {service?.description}
                 </p>
-                <Link to={'/contact'} className="cta-btn btn-border">
+                <Link to={'/contact'} className="cta-btn btn-border mb-3">
                   Contact Us
                 </Link>
               </div>

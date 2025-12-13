@@ -45,7 +45,7 @@ const Partners = ({ usedTools, clients, partners }) => {
 
   return (
     <div className="container my-5 text-center">
-      <h2 className="section-title">" Our Partners in Seccess "</h2>
+      <h2 className="section-title">Our Partners in Success</h2>
       <ul className="nav nav-pills mb-3 text-center m-auto d-flex justify-content-center" id="pills-tab" role="tablist">
         <li className="nav-item noActive  " role="presentation">
           <button className="nav-link noActive  active" id="pills-tools-tab" data-bs-toggle="pill" data-bs-target="#pills-tools" type="button" role="tab" aria-controls="pills-tools" aria-selected="true">Used Tools</button>
@@ -62,7 +62,8 @@ const Partners = ({ usedTools, clients, partners }) => {
           <Slider {...settings}>
             {usedTools?.map((tool, index) => (
               <div key={index}>
-                <OptimizedImage src={tool.icon} alt={tool.title} style={{ width: 200, height: 200, margin: "auto" }} />
+                <img src={tool.icon} alt={tool.title} style={{ width: 200, height: 200, margin: "auto" }} />
+                {/* <OptimizedImage src={tool.icon} alt={tool.title} style={{ width: 200, height: 200, margin: "auto" }} /> */}
               </div>
             ))}
           </Slider>
