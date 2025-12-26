@@ -421,8 +421,8 @@ export const ourTeam = [
     Position: 'Eng. Infrastructure BIM'
   },
   {
-    profileImage: '/img/Mohammed_AITayeb_Hassan_Ali_Ahmed.webp',
-    Name: 'Mohammed AITayeb Hassan Ali Ahmed',
+    profileImage: '/img/Mohammed_AlTayeb_Hassan_Ali_Ahmed.webp',
+    Name: 'Mohammed AlTayeb Hassan Ali Ahmed',
     Position: 'Eng. Infrastructure BIM'
   },
   {
