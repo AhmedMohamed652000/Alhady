@@ -300,51 +300,161 @@ export const portfolioData = [
 ]
 
 export const ourTeam = [
-    {
-        profileImage: '/img/people1.webp',
-        Name: 'Saad AbdElgany',
-        Position: 'Bim Specialist (Arch)'
-    },
-    {
-        profileImage: '/img/people2.webp',
-        Name: 'Khaled Ghammes',
-        Position: 'Bim Specialist (Arch)'
-    },
-    {
-        profileImage: '/img/people3.webp',
-        Name: 'Aya Salah',
-        Position: 'Bim Modeller'
-    },
-    {
-        profileImage: '/img/people4.webp',
-        Name: 'Karim ElGareb',
-        Position: 'Bim Specialist'
-    },
-    {
-        profileImage: '/img/people5.webp',
-        Name: 'Khaled Mokhtar',
-        Position: 'Bim Modeller'
-    },
-    {
-        profileImage: '/img/people6.webp',
-        Name: 'Rezk Abdel Azim',
-        Position: 'Bim Manager'
-    },
-    {
-        profileImage: '/img/people7.webp',
-        Name: 'Zeyad Hesham',
-        Position: 'Bim modller (Str)'
-    },
-    {
-        profileImage: '/img/people8.webp',
-        Name: 'Ahmed AbdElwahab',
-        Position: 'Bim Modeller (Infra)'
-    },
-    {
-        profileImage: '/img/people9.webp',
-        Name: 'Ahmed Gibrel',
-        Position: 'Bim Modeller (Infra)'
-    },
+  {
+    profileImage: '/img/Mohamed_Ibrahim_Elhady.webp',
+    Name: 'Mohamed Ibrahim Elhady',
+    Position: 'Chairman'
+  },
+  {
+    profileImage: '/img/RIZK_ABDUL_AZIM_RIZK_ALI.webp',
+    Name: 'RIZK ABDUL AZIM RIZK ALI',
+    Position: 'BIM Manager'
+  },
+  {
+    profileImage: '/img/ASHRAF_ABDEL_HAMID_MOHAMED_GHAMRI.webp',
+    Name: 'ASHRAF ABDEL HAMID MOHAMED GHAMRI',
+    Position: 'Eng.Structure Manager'
+  },
+  {
+    profileImage: '/img/MOHAMED_RASHAD_ALI_KHALIL.webp',
+    Name: 'MOHAMED RASHAD ALI KHALIL',
+    Position: 'HR Manager'
+  },
+  {
+    profileImage: '/img/Ibrahim_Khaled_Ibrahim_Ahmed_Gad.webp',
+    Name: 'Ibrahim Khaled Ibrahim Ahmed Gad',
+    Position: 'Eng. Team Leader Architectural BIM'
+  },
+  {
+    profileImage: '/img/BASMA_SALAH_AWAD_HAZZA.webp',
+    Name: 'BASMA SALAH AWAD HAZZA',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/JANAT_MUSTAFA_ABDEL_AZIM_AHMED.webp',
+    Name: 'JANAT MUSTAFA ABDEL AZIM AHMED',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/SAAD_MOHAMAD_ALI_ABDEL_GHANI.webp',
+    Name: 'SAAD MOHAMAD ALI ABDEL GHANI',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/KARIM_MOHAMAD_AL_GHARIB_AHMED_MAHMOUD.webp',
+    Name: 'KARIM MOHAMAD AL GHARIB AHMED MAHMOUD',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/KHALED_MOHAMAD_MOHAMAD_GHAMS.webp',
+    Name: 'KHALED MOHAMAD MOHAMAD GHAMS',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/ABDUL_RAHMAN_AL_QADI.webp',
+    Name: 'ABDUL RAHMAN AL QADI',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/Ahmed_Ashraf_Mostafa_Saad_Mohamed_Elgendy.webp',
+    Name: 'Ahmed Ashraf Mostafa Saad Mohamed Elgendy',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/KHALED_MUKHTAR_HASHEM_MOHAMAD.webp',
+    Name: 'KHALED MUKHTAR HASHEM MOHAMAD',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/AYA_SALAH_AL_DIN_AYOUB_MOHAMAD_ALSAYYID.webp',
+    Name: 'AYA SALAH AL DIN AYOUB MOHAMAD ALSAYYID',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/KARIM_ADEL_ABDEL_FATTAH_ALI.webp',
+    Name: 'KARIM ADEL ABDEL FATTAH ALI',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/Esraa_Ashraf_Kamel_Mohamed.webp',
+    Name: 'Esraa Ashraf Kamel Mohamed',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/Sarah_Mohamed_Mohamed_Sabry_Ibrahim_Badr.webp',
+    Name: 'Sarah Mohamed Mohamed Sabry Ibrahim Badr',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/Ahmed_Soliman_Khalil_Mohammed_Soliman.webp',
+    Name: 'Ahmed Soliman Khalil Mohammed Soliman',
+    Position: 'Eng.Architectural BIM'
+  },
+  {
+    profileImage: '/img/ABDULRAHMAN_ANWAR_ABUAL_SAUD.webp',
+    Name: 'ABDULRAHMAN ANWAR ABUAL SAUD',
+    Position: 'Eng.BIM Coordinator'
+  },
+  {
+    profileImage: '/img/NOURHAN_RIAD_ABDEL_GHANI_EL_ARABI.webp',
+    Name: 'NOURHAN RIAD ABDEL GHANI EL ARABI',
+    Position: 'Eng. Team Leader Infrastructure BIM'
+  },
+  {
+    profileImage: '/img/MOHAMAD_HASSAN_AL_SAYED_METWALLY_JIBRIL.webp',
+    Name: 'MOHAMAD HASSAN AL SAYED METWALLY JIBRIL',
+    Position: 'Eng. Infrastructure BIM'
+  },
+  {
+    profileImage: '/img/HUSSEIN_MOHAMED_MOHAMED_AFFAN.webp',
+    Name: 'HUSSEIN MOHAMED MOHAMED AFFAN',
+    Position: 'Eng. Infrastructure BIM'
+  },
+  {
+    profileImage: '/img/YOUSSEF_MOHAMAD_ABDULLAH_AL_SAYED.webp',
+    Name: 'YOUSSEF MOHAMAD ABDULLAH AL SAYED',
+    Position: 'Eng. Infrastructure BIM'
+  },
+  {
+    profileImage: '/img/MOHAMED_MUSTAFA_MAHMOUD_AHMED.webp',
+    Name: 'MOHAMED MUSTAFA MAHMOUD AHMED',
+    Position: 'Eng. Infrastructure BIM'
+  },
+  {
+    profileImage: '/img/Mohammed_AITayeb_Hassan_Ali_Ahmed.webp',
+    Name: 'Mohammed AITayeb Hassan Ali Ahmed',
+    Position: 'Eng. Infrastructure BIM'
+  },
+  {
+    profileImage: '/img/Yousif_Abdellatef_Abdelaziz_Ali.webp',
+    Name: 'Yousif Abdellatef Abdelaziz Ali',
+    Position: 'Eng. Infrastructure BIM'
+  },
+  {
+    profileImage: '/img/ALAA_MOHAMMED_HUSSEIN_MOHAMED.webp',
+    Name: 'ALAA MOHAMMED HUSSEIN MOHAMED',
+    Position: 'Eng.Structure'
+  },
+  {
+    profileImage: '/img/MOHAMED_MOHAMED_ALI_ABDELGHANI.webp',
+    Name: 'MOHAMED MOHAMED ALI ABDELGHANI',
+    Position: 'Eng.Structure BIM'
+  },
+  {
+    profileImage: '/img/BASANT_ATTIA_ABDUL_AZIZ_HUSSEIN.webp',
+    Name: 'BASANT ATTIA ABDUL AZIZ HUSSEIN',
+    Position: 'Eng.Structure'
+  },
+  {
+    profileImage: '/img/Abdallah_Samy_Mohamed_Mohamed.webp',
+    Name: 'Abdallah Samy Mohamed Mohamed',
+    Position: 'Eng.Structure'
+  },
+  {
+    profileImage: '/img/AMIR_NASHAAT_ALSAYYID_MOHAMED.webp',
+    Name: 'AMIR NASHAAT ALSAYYID MOHAMED',
+    Position: 'Eng.Electrical BIM'
+  }
 ]
 
 export const ourProjects = [
