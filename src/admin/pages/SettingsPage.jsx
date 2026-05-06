@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AdminLayout from '../components/AdminLayout';
-import { Button } from '@/components/ui/button';
-import api from '@/utils/api';
+import { Button } from '../../components/ui/button';
+import api from '../../utils/api';
 import { Save, Loader2 } from 'lucide-react';
 
 const SettingsPage = () => {
