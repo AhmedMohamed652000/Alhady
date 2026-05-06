@@ -13,7 +13,7 @@ Al-Hady Engineering & Consultation — BIM engineering company website + admin C
 
 ## Key Files
 - `plan.md` — full implementation plan (phases 1–5)
-- `specs/001-backend-foundation/plan.md` — active feature plan (backend foundation)
+- `specs/002-admin-dashboard-shell/plan.md` — active feature plan (admin dashboard shell)
 - `src/Dashboard/dashboard.js` — current static data (seed source)
 - `src/main-component/router/index.js` — all routes
 - `src/main-component/App/App.js` — app entry
