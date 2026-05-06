@@ -28,6 +28,7 @@ import AdminTeamPage from '../../admin/pages/TeamPage'
 import ReviewsPage from '../../admin/pages/ReviewsPage'
 import AdminPortfolioPage from '../../admin/pages/PortfolioPage'
 import AdminProjectsPage from '../../admin/pages/ProjectsPage'
+import ProjectFormPage from '../../admin/pages/ProjectFormPage'
 import SettingsPage from '../../admin/pages/SettingsPage'
 import ProtectedRoute from '../../admin/components/ProtectedRoute'
 import { Redirect } from 'react-router-dom'
@@ -71,6 +72,8 @@ const AllRoute = () => {
             <ProtectedRoute exact path="/admin/reviews" component={ReviewsPage} />
             <ProtectedRoute exact path="/admin/portfolio" component={AdminPortfolioPage} />
             <ProtectedRoute exact path="/admin/projects" component={AdminProjectsPage} />
+            <ProtectedRoute exact path="/admin/projects/new" component={ProjectFormPage} />
+            <ProtectedRoute exact path="/admin/projects/:id/edit" component={ProjectFormPage} />
             <ProtectedRoute exact path="/admin/settings" component={SettingsPage} />
           </Switch>
       </Router>
