@@ -41,4 +41,4 @@ const Tour = () => {
   );
 };
 
-export default Tour;
+export default React.memo(Tour);

@@ -27,5 +27,5 @@ const HomePage =() => {
         </Fragment>
     )
 };
-export default HomePage;
+export default React.memo(HomePage);
 

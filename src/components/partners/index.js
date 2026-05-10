@@ -8,10 +8,12 @@ import api, { getImageUrl } from "../../utils/api";
 import OptimizedImage from "../../utils/OptimizedImage";
 import './style.css'
 
+const EMPTY_ARRAY = [];
+
 const Partners = ({ 
-  usedTools: propsTools = [], 
-  clients: propsClients = [], 
-  partners: propsPartners = [],
+  usedTools: propsTools = EMPTY_ARRAY, 
+  clients: propsClients = EMPTY_ARRAY, 
+  partners: propsPartners = EMPTY_ARRAY,
   showTitle = true,
   title = "Our Partners in Success"
 }) => {
@@ -167,5 +169,5 @@ const Partners = ({
   );
 };
 
-export default Partners;
+export default React.memo(Partners);
 

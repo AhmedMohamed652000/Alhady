@@ -109,4 +109,4 @@ class Testimonial extends Component {
   }
 }
 
-export default Testimonial;
+export default React.memo(Testimonial);
