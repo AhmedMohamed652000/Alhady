@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env CI=false react-scripts build && cd native-dashboard && npm install && npm run build && mkdir -p ../build/admin && cp -r dist/* ../build/admin/",
+    "build": "cross-env CI=false react-scripts build && cd native-dashboard && npm install && npm run build && npx shx mkdir -p ../build/admin && npx shx cp -r dist/* ../build/admin/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -61,6 +61,7 @@
     "autoprefixer": "^10.5.0",
     "cross-env": "^10.1.0",
     "postcss": "^8.5.14",
+    "shx": "^0.4.0",
     "tailwindcss": "^3.4.19"
   }
 }
