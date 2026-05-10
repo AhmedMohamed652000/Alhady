@@ -1,4 +1,4 @@
-const BASE_URL = 'https://alhady-eyy98srmf-ahmedmohamed652000s-projects.vercel.app';
+const BASE_URL = 'https://alhady-five.vercel.app';
 const API_URL = `${BASE_URL}/api`;
 
 export function getImageUrl(path) {
