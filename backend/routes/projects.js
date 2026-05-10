@@ -9,7 +9,7 @@ const Project = require('../models/Project');
 router.get('/', optionalAuth, async (req, res, next) => {
     try {
         const filter = req.admin ? {} : { active: true };
-        const projects = await Project.find(filter).sort({ order: 1 });
+        const projects = await Project.find(filter).sort({ order: 1 }).lean();
         res.json({ success: true, data: projects });
     } catch (error) {
         next(error);
@@ -59,7 +59,7 @@ router.patch('/reorder', auth, [
 router.get('/:id', optionalAuth, async (req, res, next) => {
     try {
         const filter = req.admin ? { _id: req.params.id } : { _id: req.params.id, active: true };
-        const project = await Project.findOne(filter);
+        const project = await Project.findOne(filter).lean();
         if (!project) {
             return res.status(404).json({ success: false, message: 'Project not found or inactive' });
         }

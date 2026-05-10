@@ -9,7 +9,7 @@ const Banner = require('../models/Banner');
 router.get('/', optionalAuth, async (req, res, next) => {
     try {
         const filter = req.admin ? {} : { active: true };
-        const banners = await Banner.find(filter).sort({ order: 1 });
+        const banners = await Banner.find(filter).sort({ order: 1 }).lean();
         res.json({ success: true, data: banners });
     } catch (error) {
         next(error);
@@ -42,7 +42,7 @@ router.patch('/reorder', auth, [
 router.get('/:page', optionalAuth, async (req, res, next) => {
     try {
         const filter = req.admin ? { page: req.params.page } : { page: req.params.page, active: true };
-        const banner = await Banner.findOne(filter);
+        const banner = await Banner.findOne(filter).lean();
         if (!banner) {
             return res.status(404).json({ success: false, message: 'Banner not found or inactive' });
         }

@@ -31,4 +31,9 @@ const ReviewSchema = new mongoose.Schema({
   }
 });
 
+// Add indexes for performance
+ReviewSchema.index({ order: 1 });
+ReviewSchema.index({ active: 1 });
+ReviewSchema.index({ active: 1, order: 1 });
+
 module.exports = mongoose.model('Review', ReviewSchema);

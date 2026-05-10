@@ -9,7 +9,7 @@ const Review = require('../models/Review');
 router.get('/', optionalAuth, async (req, res, next) => {
     try {
         const filter = req.admin ? {} : { active: true };
-        const reviews = await Review.find(filter).sort({ order: 1 });
+        const reviews = await Review.find(filter).sort({ order: 1 }).lean();
         res.json({ success: true, data: reviews });
     } catch (error) {
         next(error);

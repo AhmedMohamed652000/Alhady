@@ -38,4 +38,10 @@ BannerSchema.pre('save', function(next) {
   next();
 });
 
+// Add indexes for performance
+BannerSchema.index({ page: 1 });
+BannerSchema.index({ order: 1 });
+BannerSchema.index({ active: 1 });
+BannerSchema.index({ active: 1, order: 1 });
+
 module.exports = mongoose.model('Banner', BannerSchema);

@@ -8,7 +8,7 @@ const Team = require('../models/Team');
 router.get('/', optionalAuth, async (req, res, next) => {
     try {
         const filter = req.admin ? {} : { active: true };
-        const team = await Team.find(filter).sort({ order: 1 });
+        const team = await Team.find(filter).sort({ order: 1 }).lean();
         res.json({ success: true, data: team });
     } catch (error) {
         next(error);

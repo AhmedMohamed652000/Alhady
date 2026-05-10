@@ -9,7 +9,7 @@ const Portfolio = require('../models/Portfolio');
 router.get('/', optionalAuth, async (req, res, next) => {
     try {
         const filter = req.admin ? {} : { active: true };
-        const portfolio = await Portfolio.find(filter).sort({ order: 1 });
+        const portfolio = await Portfolio.find(filter).sort({ order: 1 }).lean();
         res.json({ success: true, data: portfolio });
     } catch (error) {
         next(error);

@@ -74,19 +74,33 @@ app.use((req, res, next) => {
 // Database connection logic
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/alhady';
 
+// Global cache for connection to handle Vercel's serverless environment
+let cachedConnection = null;
+
 const connectDB = async () => {
+  if (cachedConnection) {
+    return cachedConnection;
+  }
+
+  // Set global mongoose options
+  mongoose.set('bufferCommands', false); // Disable buffering for faster failure and better debugging
+
+  const options = {
+    serverSelectionTimeoutMS: 10000,
+    socketTimeoutMS: 45000,
+    maxPoolSize: 1, // Reduced for serverless to avoid connection spikes
+    minPoolSize: 1,
+    connectTimeoutMS: 10000,
+  };
+
   try {
-    if (mongoose.connection.readyState >= 1) return;
-
-    const options = {
-      serverSelectionTimeoutMS: 15000,
-      socketTimeoutMS: 45000,
-      maxPoolSize: 10,
-    };
-
-    await mongoose.connect(MONGO_URI, options);
+    console.log('Connecting to MongoDB...');
+    cachedConnection = mongoose.connect(MONGO_URI, options);
+    await cachedConnection;
     console.log('Connected to MongoDB');
+    return cachedConnection;
   } catch (err) {
+    cachedConnection = null;
     console.error('Database connection error:', err.message);
     throw err;
   }
@@ -96,7 +110,6 @@ const connectDB = async () => {
 connectDB().catch(err => console.error('Initial DB connect failed:', err.message));
 
 // Middleware to ensure DB connection for every request
-// MUST be defined BEFORE routes to prevent "buffering timed out" errors
 app.use(async (req, res, next) => {
   try {
     if (mongoose.connection.readyState !== 1) {

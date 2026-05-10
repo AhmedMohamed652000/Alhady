@@ -9,7 +9,7 @@ const Partner = require('../models/Partner');
 router.get('/', optionalAuth, async (req, res, next) => {
     try {
         const filter = req.admin ? {} : { active: true };
-        const partners = await Partner.find(filter).sort({ order: 1 });
+        const partners = await Partner.find(filter).sort({ order: 1 }).lean();
         res.json({ success: true, data: partners });
     } catch (error) {
         next(error);

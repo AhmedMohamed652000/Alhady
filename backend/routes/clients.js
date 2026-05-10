@@ -9,7 +9,7 @@ const Client = require('../models/Client');
 router.get('/', optionalAuth, async (req, res, next) => {
     try {
         const filter = req.admin ? {} : { active: true };
-        const clients = await Client.find(filter).sort({ order: 1 });
+        const clients = await Client.find(filter).sort({ order: 1 }).lean();
         res.json({ success: true, data: clients });
     } catch (error) {
         next(error);
