@@ -40,7 +40,7 @@ app.use(cors({
 }));
 
 // Handle preflight requests explicitly
-app.options('*', cors());
+app.options(/.*/, cors());
 
 app.use(helmet({
   crossOriginResourcePolicy: { policy: "cross-origin" },
