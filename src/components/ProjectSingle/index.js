@@ -14,7 +14,7 @@ const ProjectSingle = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await api.get(`/projects/${id}`);
+        const response = await api.getWithCache(`/projects/${id}`);
         if (response.data.success) {
           setProject(response.data.data);
         }

@@ -23,4 +23,9 @@ const ToolSchema = new mongoose.Schema({
   }
 });
 
+// Add indexes for performance
+ToolSchema.index({ order: 1 });
+ToolSchema.index({ active: 1 });
+ToolSchema.index({ active: 1, order: 1 });
+
 module.exports = mongoose.model('Tool', ToolSchema);

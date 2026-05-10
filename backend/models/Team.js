@@ -27,4 +27,9 @@ const TeamSchema = new mongoose.Schema({
   }
 });
 
+// Add indexes for performance
+TeamSchema.index({ order: 1 });
+TeamSchema.index({ active: 1 });
+TeamSchema.index({ active: 1, order: 1 });
+
 module.exports = mongoose.model('Team', TeamSchema);

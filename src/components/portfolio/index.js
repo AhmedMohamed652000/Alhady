@@ -9,7 +9,7 @@ const Portfolio = () => {
   useEffect(() => {
     const fetchPortfolio = async () => {
       try {
-        const res = await api.get('/portfolio');
+        const res = await api.getWithCache('/portfolio');
         if (res.data && res.data.success) {
           setPortfolioData(res.data.data);
         }

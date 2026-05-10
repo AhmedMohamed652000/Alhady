@@ -39,4 +39,9 @@ const ServiceSchema = new mongoose.Schema({
   }
 });
 
+// Add indexes for performance
+ServiceSchema.index({ order: 1 });
+ServiceSchema.index({ active: 1 });
+ServiceSchema.index({ active: 1, order: 1 });
+
 module.exports = mongoose.model('Service', ServiceSchema);

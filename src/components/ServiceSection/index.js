@@ -13,7 +13,7 @@ const ServiceSection = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const res = await api.get('/services');
+        const res = await api.getWithCache('/services');
         if (res.data && res.data.success) {
           setServices(res.data.data);
         }

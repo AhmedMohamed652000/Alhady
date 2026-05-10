@@ -12,7 +12,7 @@ const ProjectList = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await api.get('/projects');
+        const response = await api.getWithCache('/projects');
         if (response.data.success) {
           setProjects(response.data.data);
         }

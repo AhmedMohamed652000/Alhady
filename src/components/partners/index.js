@@ -30,7 +30,7 @@ const Partners = ({
           setUsedTools(propsTools);
         } else {
           fetchPromises.push(
-            api.get('/tools')
+            api.getWithCache('/tools')
               .then(res => { if (res.data.success) setUsedTools(res.data.data); })
               .catch(() => {})
           );
@@ -40,7 +40,7 @@ const Partners = ({
           setClients(propsClients);
         } else {
           fetchPromises.push(
-            api.get('/clients')
+            api.getWithCache('/clients')
               .then(res => { if (res.data.success) setClients(res.data.data); })
               .catch(() => {})
           );
@@ -50,7 +50,7 @@ const Partners = ({
           setPartners(propsPartners);
         } else {
           fetchPromises.push(
-            api.get('/partners')
+            api.getWithCache('/partners')
               .then(res => { if (res.data.success) setPartners(res.data.data); })
               .catch(() => {})
           );

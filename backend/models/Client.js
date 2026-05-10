@@ -23,4 +23,9 @@ const ClientSchema = new mongoose.Schema({
   }
 });
 
+// Add indexes for performance
+ClientSchema.index({ order: 1 });
+ClientSchema.index({ active: 1 });
+ClientSchema.index({ active: 1, order: 1 });
+
 module.exports = mongoose.model('Client', ClientSchema);

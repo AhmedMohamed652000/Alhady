@@ -10,7 +10,7 @@ const Team = () => {
   useEffect(() => {
     const fetchTeam = async () => {
       try {
-        const res = await api.get('/team');
+        const res = await api.getWithCache('/team');
         if (res.data && res.data.success) {
           setTeam(res.data.data.slice(0, 3));
         }

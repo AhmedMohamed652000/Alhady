@@ -27,4 +27,9 @@ const PortfolioSchema = new mongoose.Schema({
   }
 });
 
+// Add indexes for performance
+PortfolioSchema.index({ order: 1 });
+PortfolioSchema.index({ active: 1 });
+PortfolioSchema.index({ active: 1, order: 1 });
+
 module.exports = mongoose.model('Portfolio', PortfolioSchema);

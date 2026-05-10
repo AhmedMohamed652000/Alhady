@@ -23,4 +23,9 @@ const PartnerSchema = new mongoose.Schema({
   }
 });
 
+// Add indexes for performance
+PartnerSchema.index({ order: 1 });
+PartnerSchema.index({ active: 1 });
+PartnerSchema.index({ active: 1, order: 1 });
+
 module.exports = mongoose.model('Partner', PartnerSchema);
