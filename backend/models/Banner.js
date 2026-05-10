@@ -19,6 +19,14 @@ const BannerSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  order: {
+    type: Number,
+    default: 0
+  },
+  active: {
+    type: Boolean,
+    default: true
+  },
   updatedAt: {
     type: Date,
     default: Date.now

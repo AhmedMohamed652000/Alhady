@@ -1,11 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import OptimizedImage from "../../utils/OptimizedImage";
+import React, { useEffect, useState } from "react";
+import api, { getImageUrl } from "../../utils/api";
 
 import "./style.css";
-import { ourTeam } from "../../Dashboard/dashboard";
 
 const Team = () => {
+  const [team, setTeam] = useState([]);
+
+  useEffect(() => {
+    const fetchTeam = async () => {
+      try {
+        const res = await api.get('/team');
+        if (res.data && res.data.success) {
+          setTeam(res.data.data);
+        }
+      } catch (err) {
+        console.error('Error fetching team:', err);
+      }
+    };
+    fetchTeam();
+  }, []);
+
   return (
     <section className="team-page-area">
       <div className="container">
@@ -24,16 +38,19 @@ const Team = () => {
         <div className="row">
           <div className="col-lg-10 mx-auto">
             <div className="row justify-content-center">
-              {ourTeam?.map(ourTeam => {
+              {team?.map(member => {
                 return (
-                  <div key={ourTeam.id} className="col-md-4 col-sm-6">
+                  <div key={member._id} className="col-md-4 col-sm-6">
                     <div className="single-team-box">
                       <div className="team-image">
-                        <OptimizedImage src={ourTeam.profileImage} alt="team" />
-                        <div className="team-meta">
-                          <h4>{ourTeam.Name}</h4>
-                          <p>{ourTeam.Position}</p>
-                        </div>
+                        <img 
+                          src={getImageUrl(member.profileImage) || "/assets/img/team/1.jpg"} 
+                          alt={member.name} 
+                        />
+                      </div>
+                      <div className="team-meta">
+                        <h4>{member.name}</h4>
+                        <p>{member.position}</p>
                       </div>
                     </div>
                   </div>

@@ -7,11 +7,8 @@ import Tour from '../../components/tour'
 import Partners from '../../components/partners'
 import ProjectSection from '../../components/ProjectSection'
 import Testimonial from '../../components/testimonial'
-import BlogSection from '../../components/BlogSection'
+
 import Footer from '../../components/footer'
-import { usedTools } from '../../Dashboard/dashboard';
-import { clients } from '../../Dashboard/dashboard';
-import { partners } from '../../Dashboard/dashboard';
 
 
 const HomePage =() => {
@@ -22,7 +19,7 @@ const HomePage =() => {
             <About/>
             <ServiceSection/>
             <Tour/>
-            <Partners usedTools={usedTools}  clients={clients} partners={partners}/>
+            <Partners />
             <ProjectSection/>
             <Testimonial/>
             {/* <BlogSection/> */}

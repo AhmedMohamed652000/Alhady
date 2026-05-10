@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import OptimizedImage from "../../utils/OptimizedImage";
+import api, { getImageUrl } from "../../utils/api";
 
 import "./style.css";
-import { ourProjects } from "../../Dashboard/dashboard";
 
 const ProjectList = () => {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await api.get('/projects');
+        if (response.data.success) {
+          setProjects(response.data.data);
+        }
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProjects();
+  }, []);
+
+  if (loading) {
+    return <div className="text-center py-5">Loading projects...</div>;
+  }
+
   return (
     <section className="projects-area projects-page-area">
       <div className="container">
@@ -21,11 +44,11 @@ const ProjectList = () => {
             </div>
             <div className="row align-items-center justify-content-between">
               {
-                ourProjects?.map(ourProject => (
-                  <div className="col-md-5  col-sm-6">
+                projects?.map(ourProject => (
+                  <div key={ourProject._id || ourProject.id} className="col-md-5  col-sm-6">
                     <div className="project-box">
-                      <Link to={`/project-details/${ourProject.id}`}>
-                        <OptimizedImage src={ourProject?.homeCardImage} alt="img" />
+                      <Link to={`/project-details/${ourProject._id || ourProject.id}`}>
+                        <OptimizedImage src={getImageUrl(ourProject?.homeCardImage || ourProject?.projectImage)} alt="img" />
                         <h3>
                           {ourProject?.title}
                         </h3>
@@ -45,7 +68,7 @@ const ProjectList = () => {
                           >
                             <path
                               stroke="#ffffff"
-                              d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                              d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8"
                             />
                             <circle stroke="#ffffff" cx={12} cy={12} r={3} />
                           </svg>

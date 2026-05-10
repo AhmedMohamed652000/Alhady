@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B0F19;
+  --color-surface: #111827;
+  --color-primary: #8B5CF6;
+  --color-secondary: #3B82F6;
+  --color-textMain: #F3F4F6;
+  --color-textMuted: #9CA3AF;
+  --color-border: #1F2937;
+}
+
+/* ── Light theme overrides ─────────────────────────────────────────────── */
+:root[data-theme="light"] {
+  --color-background: #F1F5F9;
+  --color-surface: #FFFFFF;
+  --color-primary: #7C3AED;
+  --color-secondary: #2563EB;
+  --color-textMain: #0F172A;
+  --color-textMuted: #64748B;
+  --color-border: #E2E8F0;
+}
+
+@layer base {
+  body {
+    font-family: 'Outfit', sans-serif;
+    @apply bg-background text-textMain antialiased;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Arabic font */
+  [data-lang="ar"] body {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  /* Smooth surface transitions */
+  *, *::before, *::after {
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+  }
+  /* Exclude transition-breaking properties */
+  button, a, input, textarea, select {
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+                color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-background; }
+  ::-webkit-scrollbar-thumb { @apply bg-border rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-textMuted; }
+
+  .glass-panel {
+    @apply bg-surface/80 backdrop-blur-md border border-border shadow-lg rounded-xl;
+  }
+
+  .nav-item {
+    @apply flex items-center px-4 py-3 text-textMuted hover:text-textMain rounded-lg transition-all duration-200;
+  }
+  .nav-item:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  }
+
+  .nav-item.active {
+    @apply text-white border-s-4 border-primary;
+    background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+
+  /* Light mode: active nav item needs dark text for readability */
+  [data-theme="light"] .nav-item.active {
+    @apply text-primary;
+  }
+}

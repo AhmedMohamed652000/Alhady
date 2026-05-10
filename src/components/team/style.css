@@ -11,14 +11,17 @@
 }
 
 .team-image img {
-	border-radius: 5px
+	border-radius: 5px;
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	display: block;
 }
 
 .team-image {
 	position: relative;
 	overflow: hidden;
 	border-radius: 5px;
-	z-index: -1;
 }
 
 .team-image:after {
@@ -56,19 +59,19 @@
 .team-meta {
 	position: absolute;
 	bottom: 20px;
-	z-index: 1;
+	z-index: 5;
 	width: 100%;
 	text-align: left;
-	padding: 0 30px;
+	padding: 0 25px;
 	color: #fff
 }
 
 .team-meta h4 {
-	font-size: 30px;
+	font-size: 26px;
 	color: #fff;
 	text-transform: capitalize;
-	letter-spacing: 2px;
-	font-weight: 500;
+	letter-spacing: 1px;
+	font-weight: 600;
 	margin: 0;
 }
 
@@ -109,6 +112,40 @@
 
 .team-page-area .site-heading {
 	margin-bottom: 0
+}
+
+.single-team-box.no-image {
+	background: #111;
+	border: 1px solid #333;
+	min-height: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 30px;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.single-team-box.no-image:hover {
+	transform: translateY(-5px);
+	border-color: #D4AF37;
+	box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.team-meta-static h4 {
+	font-size: 26px;
+	font-weight: 600;
+	margin-bottom: 8px;
+	/* Inherits gold gradient from global h4 style */
+}
+
+.team-meta-static p {
+	color: #888;
+	font-size: 16px;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 /*Responsive*/

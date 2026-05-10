@@ -91,19 +91,16 @@ const team = [
     {
         name: 'Mohamed Ibrahim Elhady',
         position: 'Chairman',
-        profileImage: '/img/photo/Mohamed_Ibrahim_Elhady.webp',
         order: 1
     },
     {
         name: 'RIZK ABDUL AZIM RIZK ALI',
         position: 'BIM Manager',
-        profileImage: '/img/photo/RIZK_ABDUL_AZIM_RIZK_ALI.webp',
         order: 2
     },
     {
         name: 'ASHRAF ABDEL HAMID MOHAMED GHAMRI',
         position: 'Eng.Structure Manager',
-        profileImage: '/img/photo/ASHRAF_ABDEL_HAMID_MOHAMED_GHAMRI.webp',
         order: 3
     }
 ];

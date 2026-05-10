@@ -11,14 +11,17 @@
 }
 
 .team-image img {
-	border-radius: 5px
+	border-radius: 5px;
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	display: block;
 }
 
 .team-image {
 	position: relative;
 	overflow: hidden;
 	border-radius: 5px;
-	z-index: -1;
 }
 
 .team-image:after {
@@ -56,19 +59,19 @@
 .team-meta {
 	position: absolute;
 	bottom: 20px;
-	z-index: 1;
+	z-index: 5;
 	width: 100%;
 	text-align: left;
-	padding: 0 30px;
+	padding: 0 25px;
 	color: #fff
 }
 
 .team-meta h4 {
-	font-size: 30px;
+	font-size: 26px;
 	color: #fff;
 	text-transform: capitalize;
-	letter-spacing: 2px;
-	font-weight: 500;
+	letter-spacing: 1px;
+	font-weight: 600;
 	margin: 0;
 }
 

@@ -8,6 +8,14 @@
 	overflow: hidden;
 }
 
+.portfolio-box img,
+.portfolio-box .optimized-image-wrapper {
+    width: 100%;
+    height: 400px !important;
+    object-fit: cover !important;
+    transition: all 0.4s ease;
+}
+
 .portfolio-box .portfolio-text h2,
 .portfolio-box .portfolio-text h3 {
 	/* Gold gradient text */

@@ -1,6 +1,20 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const BASE_URL = 'https://alhady-eyy98srmf-ahmedmohamed652000s-projects.vercel.app';
+const API_URL = `${BASE_URL}/api`;
+
+const CLOUDINARY_BASE = 'https://res.cloudinary.com/dj6ezvnt0';
+
+export const getImageUrl = (path) => {
+  if (!path) return '';
+  if (path.startsWith('http')) return path;
+  // If it's a local image path from the public folder, return as is
+  if (path.startsWith('/img/') || path.startsWith('img/')) {
+    return path.startsWith('/') ? path : '/' + path;
+  }
+  // Relative path — serve via Cloudinary
+  return `${CLOUDINARY_BASE}${path.startsWith('/') ? path : '/' + path}`;
+};
 
 const api = axios.create({
   baseURL: API_URL,

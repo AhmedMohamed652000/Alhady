@@ -53,7 +53,7 @@ const ServiceSingle = () => {
             </div>
           </div>
         </div>
-        <Partners />
+        <Partners showTitle={false} />
       </section>
     </div>
   );

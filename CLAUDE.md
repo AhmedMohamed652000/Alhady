@@ -13,7 +13,7 @@ Al-Hady Engineering & Consultation — BIM engineering company website + admin C
 
 ## Key Files
 - `plan.md` — full implementation plan (phases 1–5)
-- `specs/003-crud-content-management/plan.md` — active feature plan (CRUD content management pages)
+- `specs/005-polish-production-ready/plan.md` — active feature plan (Phase 5: Polish & Production Readiness)
 - `src/Dashboard/dashboard.js` — current static data (seed source)
 - `src/main-component/router/index.js` — all routes
 - `src/main-component/App/App.js` — app entry
