@@ -22,18 +22,33 @@ const settingsRouter = require('./routes/settings');
 
 
 const app = express();
+app.set('trust proxy', 1);
 
 // Middleware
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:4173', 'https://alhady.vercel.app'];
+
 app.use(cors({
-  origin: true, // Reflects the request origin
+  origin: function(origin, callback) {
+    // allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    return callback(null, true); // Allow all origins for now to fix CORS
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
+  optionsSuccessStatus: 200
 }));
+
+// Handle preflight requests explicitly
+app.options('*', cors());
+
 app.use(helmet({
-  crossOriginResourcePolicy: { policy: "cross-origin" }
+  crossOriginResourcePolicy: { policy: "cross-origin" },
+  crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
+  crossOriginEmbedderPolicy: false
 }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // API Welcome route
 app.get('/api', (req, res) => {
@@ -107,3 +122,5 @@ mongoose.connect(MONGO_URI)
     console.error('Database connection error:', err.message);
     process.exit(1);
   });
+
+module.exports = app;
