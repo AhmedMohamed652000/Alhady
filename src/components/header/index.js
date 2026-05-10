@@ -13,10 +13,6 @@ const Header = () => {
     e.preventDefault();
   };
 
-  const onClick = (e) => {
-    e.preventDefault();
-  };
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {

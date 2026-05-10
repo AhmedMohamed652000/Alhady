@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import OptimizedImage from "../../utils/OptimizedImage";
 import api, { getImageUrl } from "../../utils/api";
 

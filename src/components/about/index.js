@@ -7,7 +7,6 @@ const About = () => {
   const bg = "/img/about_background_1.webp";
   const img1 = "/img/about-1-1_1.webp";
   const img2 = "/img/about-2-2_1.webp";
-  const signature = "/img/signature_1.webp";
 
   return (
     <section className="about-area" style={{ backgroundImage: `url(${bg})` }}>
