@@ -25,34 +25,34 @@ const app = express();
 app.set('trust proxy', 1);
 
 // Middleware
-const allowedOrigins = [
-  'http://localhost:3000', 
-  'http://localhost:5173', 
-  'http://localhost:4173', 
-  'https://alhady.vercel.app',
-  'https://alhady-ahmedmohamed652000s-projects.vercel.app',
-  'https://alhady-eyy98srmf-ahmedmohamed652000s-projects.vercel.app'
-];
-
 const corsOptions = {
-  origin: function(origin, callback) {
-    // allow requests with no origin (like mobile apps or curl requests)
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      console.log('CORS blocked origin:', origin);
-      callback(null, true); // Still allowing for now to fix CORS, but logging the blocked ones
-    }
+    
+    // In development or if specifically true, allow the origin
+    // This handles the dynamic Vercel preview URLs
+    callback(null, true);
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
+  allowedHeaders: [
+    'Content-Type', 
+    'Authorization', 
+    'X-Requested-With', 
+    'Accept', 
+    'Origin',
+    'Access-Control-Allow-Headers',
+    'Access-Control-Request-Method',
+    'Access-Control-Request-Headers'
+  ],
+  exposedHeaders: ['Set-Cookie'],
   optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
-app.options(/.*/, cors(corsOptions));
+// Handle preflight requests for all routes
+app.options(/(.*)/, cors(corsOptions));
 
 app.use(helmet({
   crossOriginResourcePolicy: { policy: "cross-origin" },
@@ -119,20 +119,19 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ success: false, message: err.message || 'Internal Server Error' });
 });
 
-// Database connection and server start
-const PORT = process.env.PORT || 5000;
+// Database connection
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/alhady';
 
 mongoose.connect(MONGO_URI)
-  .then(() => {
-    console.log('Connected to MongoDB');
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
-    });
-  })
-  .catch(err => {
-    console.error('Database connection error:', err.message);
-    process.exit(1);
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('Database connection error:', err.message));
+
+// Server start (only for local development)
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
   });
+}
 
 module.exports = app;

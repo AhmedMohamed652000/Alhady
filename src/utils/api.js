@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://alhady-eyy98srmf-ahmedmohamed652000s-projects.vercel.app';
+const BASE_URL = process.env.NODE_ENV === 'production' 
+  ? window.location.origin 
+  : 'http://localhost:5000';
 const API_URL = `${BASE_URL}/api`;
 
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dj6ezvnt0';
