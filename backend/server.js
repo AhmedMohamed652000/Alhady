@@ -24,35 +24,26 @@ const settingsRouter = require('./routes/settings');
 const app = express();
 app.set('trust proxy', 1);
 
-// Middleware
+// Middleware - Enable CORS first (Permissive for Vercel)
 const corsOptions = {
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    
-    // In development or if specifically true, allow the origin
-    // This handles the dynamic Vercel preview URLs
-    callback(null, true);
-  },
-  credentials: true,
+  origin: '*',
+  credentials: false,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: [
     'Content-Type', 
     'Authorization', 
     'X-Requested-With', 
     'Accept', 
-    'Origin',
-    'Access-Control-Allow-Headers',
-    'Access-Control-Request-Method',
-    'Access-Control-Request-Headers'
+    'Origin'
   ],
-  exposedHeaders: ['Set-Cookie'],
   optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
 // Handle preflight requests for all routes
-app.options(/(.*)/, cors(corsOptions));
+app.options('*', cors(corsOptions));
+
+
 
 app.use(helmet({
   crossOriginResourcePolicy: { policy: "cross-origin" },
