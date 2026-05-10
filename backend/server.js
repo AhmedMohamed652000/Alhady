@@ -24,9 +24,26 @@ const settingsRouter = require('./routes/settings');
 const app = express();
 
 // Middleware
-app.use(cors());
-app.use(helmet());
+app.use(cors({
+  origin: true, // Reflects the request origin
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
+}));
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: "cross-origin" }
+}));
 app.use(express.json());
+
+// API Welcome route
+app.get('/api', (req, res) => {
+  res.json({ 
+    success: true, 
+    message: 'Welcome to Alhady API',
+    version: '1.0.0',
+    status: 'Running'
+  });
+});
 
 // Serve static uploads
 const uploadDir = process.env.UPLOAD_DIR || 'uploads';
@@ -56,7 +73,12 @@ app.use('/api/settings', settingsRouter);
 
 // Root route for health check
 app.get('/', (req, res) => {
-  res.json({ success: true, message: 'Alhady Backend API is running' });
+  res.json({ 
+    success: true, 
+    message: 'Welcome to Alhady Backend Service',
+    api_status: 'Online',
+    documentation: '/api'
+  });
 });
 
 // 404 handler
