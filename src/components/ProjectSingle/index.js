@@ -122,11 +122,6 @@ const ProjectSingle = () => {
                           <img src={getImageUrl(sample?.image)} alt="img" />
                           <p>{sample?.title}</p>
                         </div>
-                        <div className="project-details-box-meta-text">
-                          <p>
-                            {sample?.description}
-                          </p>
-                        </div>
                       </div>
                     </div>
                   ))

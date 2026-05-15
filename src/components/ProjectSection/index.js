@@ -45,7 +45,7 @@ const ProjectSection = () => {
                   <h3>
                     {projects[0]?.title}
                   </h3>
-                  <p>{projects[0]?.serviceCagegory}</p>
+                  <p>{projects[0]?.serviceCategory || projects[0]?.serviceCagegory}</p>
                   <div className="project-zoom">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const ProjectSection = () => {
                   <h3>
                     {projects[1]?.title}
                   </h3>
-                  <p>{projects[1]?.serviceCagegory}</p>
+                  <p>{projects[1]?.serviceCategory || projects[1]?.serviceCagegory}</p>
                   <div className="project-zoom">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +114,7 @@ const ProjectSection = () => {
                   <h3>
                     {projects[2]?.title}
                   </h3>
-                  <p>{projects[2]?.serviceCagegory}</p>
+                  <p>{projects[2]?.serviceCategory || projects[2]?.serviceCagegory}</p>
                   <div className="project-zoom">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

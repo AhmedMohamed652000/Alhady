@@ -5,17 +5,6 @@ import { t, getLang, setLang } from './i18n';
 
 // ── Page factories ──────────────────────────────────────────────────────────
 
-const bannerPage = () => createCrudPage('Banners', '/banners',
-  [{ label: 'Page', key: 'page' }, { label: 'Title', key: 'title' }, { label: 'Image', key: 'backgroundImage', type: 'image' }],
-  [{ label: 'Page', key: 'page' }, { label: 'Title', key: 'title' }, { label: 'Subtitle', key: 'subtitle' }, { label: 'Background Image', key: 'backgroundImage', type: 'image' }, { label: 'Order', key: 'order' }, { label: 'Active', key: 'active', type: 'boolean' }],
-  { idKey: 'page' }
-);
-
-const servicePage = () => createCrudPage('Services', '/services',
-  [{ label: 'Title', key: 'title' }, { label: 'Icon', key: 'icon', type: 'image' }],
-  [{ label: 'Title', key: 'title' }, { label: 'Description', key: 'description', type: 'textarea' }, { label: 'Slider Image', key: 'sliderImage', type: 'image' }, { label: 'Card Image', key: 'cardImage', type: 'image' }, { label: 'Icon', key: 'icon', type: 'image' }, { label: 'Link', key: 'link' }, { label: 'Order', key: 'order' }, { label: 'Active', key: 'active', type: 'boolean' }]
-);
-
 const projectPage = () => {
   const wrapper = document.createElement('div');
   wrapper.className = 'space-y-6';
@@ -64,6 +53,11 @@ const settingsPage = () => createSettingsPage([
   { label: 'Phone', key: 'phone' },
   { label: 'Email', key: 'email' },
   { label: 'Address', key: 'address' },
+  { label: 'Facebook URL', key: 'facebook' },
+  { label: 'Twitter URL', key: 'twitter' },
+  { label: 'Instagram URL', key: 'instagram' },
+  { label: 'LinkedIn URL', key: 'linkedin' },
+  { label: 'Pinterest URL', key: 'pinterest' },
   { label: 'Years Experience', key: 'yearsExperience', type: 'number' },
   { label: 'Projects Completed', key: 'projectsCompleted', type: 'number' },
   { label: 'Team Size', key: 'teamSize', type: 'number' },
@@ -73,8 +67,6 @@ const settingsPage = () => createSettingsPage([
 ]);
 
 const pagesMap = {
-  banners: bannerPage,
-  services: servicePage,
   projects: projectPage,
   clients: clientPage,
   partners: partnerPage,
@@ -166,10 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
   logoutBtn.addEventListener('click', logout);
 
   // ── Page routing ──────────────────────────────────────────────────────────
-  let currentPage = 'banners';
+  let currentPage = 'tools';
 
   function renderPage(pageKey) {
-    if (!pagesMap[pageKey]) pageKey = 'banners';
+    if (!pagesMap[pageKey]) pageKey = 'tools';
     currentPage = pageKey;
     mainContent.innerHTML = '';
     mainContent.appendChild(pagesMap[pageKey]());
@@ -186,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function handleRouting() {
     const hash = window.location.hash.replace('#', '');
-    renderPage(hash || 'banners');
+    renderPage(hash || 'tools');
   }
 
   window.addEventListener('hashchange', handleRouting);

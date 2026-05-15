@@ -14,21 +14,62 @@
 }
 
 .contact-info-icon {
-	border: 5px solid #111;
+	border: 5px solid #D4AF37;
 	font-size: 25px;
 	width: 70px;
 	height: 70px;
-	line-height: 60px;
-	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin-right: 50px;
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
+	background: #111; /* Dark background to make gold pop */
 }
 
 .contact-info-icon span {
-	color: #111;
+	color: #D4AF37;
+	display: block;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
+}
+
+.contact-info-icon span {
+  font-size: 20px;
+}
+
+.contact-social {
+  margin-top: 40px;
+}
+
+.contact-social h5 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contact-social ul {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-social ul li a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D4AF37;
+  border-radius: 50%;
+  color: #D4AF37;
+  transition: all 0.3s ease;
+}
+
+.contact-social ul li a:hover {
+  background: #D4AF37;
+  color: #000;
+  transform: translateY(-5px);
 }
 
 .contact-info-text h5 {
@@ -72,22 +113,54 @@
 }
 
 .contact-form .section-title {
-	color: #fff
+	color: #D4AF37
 }
 
 .contact-form input {
-	color: #111;
+	color: #D4AF37;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(212, 175, 55, 0.3);
 	height: 50px;
-	padding: 5px 10px;
+	padding: 5px 15px;
 	width: 100%;
 	margin-bottom: 20px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+.contact-form input:focus {
+	border-color: #D4AF37;
+	background: rgba(255, 255, 255, 0.15);
 }
 
 .contact-form textarea {
-	color: #111;
+	color: #D4AF37;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(212, 175, 55, 0.3);
 	height: 200px;
-	padding: 10px;
+	padding: 15px;
 	width: 100%;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+.contact-form textarea:focus {
+	border-color: #D4AF37;
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+	color: rgba(212, 175, 55, 0.6);
+}
+
+.error-text {
+	color: #ff4d4d;
+	font-size: 14px;
+	margin-top: -15px;
+	margin-bottom: 15px;
+	display: block;
+	text-align: left;
 }
 
 .contact-form-action {

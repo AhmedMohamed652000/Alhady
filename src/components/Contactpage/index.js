@@ -1,8 +1,11 @@
 import React from "react";
 import ContactForm from "../ContactFrom";
+import useSettings from "../../hooks/useSettings";
 import "./style.css";
 
 const Contactpage = () => {
+  const { settings } = useSettings();
+
   const backgroundImage = "/img/freetocontact.webp";
   return (
     <section className="contact-page-area">
@@ -11,7 +14,7 @@ const Contactpage = () => {
           <div className="col-lg-12">
             <div className="contact-form" style={{ backgroundImage: `url(${backgroundImage})` }}>
               <div className="site-heading" data-aos="fade-up">
-                <h3 className="sub-title">Al-Hady (BIM SERVICES)</h3>
+                <h3 className="sub-title">{settings?.companyName || "AL HADY"} (BIM SERVICES)</h3>
                 <h2 className="section-title">Let us know how we can add values to your Project !</h2>
               </div>
               <ContactForm />
@@ -28,9 +31,7 @@ const Contactpage = () => {
                   <div className="contact-info-text">
                     <h5>Head office</h5>
                     <p>
-                      EL SHROUK CITY – CAIRO 
-                      <br />
-                      EGYPT.
+                      {settings?.address || "EL SHROUK CITY – CAIRO – EGYPT."}
                     </p>
                   </div>
                 </div>
@@ -40,8 +41,7 @@ const Contactpage = () => {
                   </div>
                   <div className="contact-info-text">
                     <h5>Phone</h5>
-                    <p>(+02) 2030 3909</p>
-                    <p>(+02) 0100 795 0111</p>
+                    <p>{settings?.phone || "(+02) 0100 795 0111"}</p>
                   </div>
                 </div>
                 <div className="single-contact-info" data-aos="fade-up">
@@ -50,10 +50,49 @@ const Contactpage = () => {
                   </div>
                   <div className="contact-info-text">
                     <h5>Email</h5>
-                    <p>info@alhady-eg.com</p>
-                    <p>support@alhady-eg.com</p>
+                    <p>{settings?.email || "info@alhady-eg.com"}</p>
                   </div>
                 </div>
+              </div>
+              <div className="contact-social" data-aos="fade-up">
+                <h5>Follow Us</h5>
+                <ul>
+                  {settings?.facebook && (
+                    <li>
+                      <a href={settings.facebook} target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-facebook-f" />
+                      </a>
+                    </li>
+                  )}
+                  {settings?.twitter && (
+                    <li>
+                      <a href={settings.twitter} target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-twitter" />
+                      </a>
+                    </li>
+                  )}
+                  {settings?.instagram && (
+                    <li>
+                      <a href={settings.instagram} target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-instagram" />
+                      </a>
+                    </li>
+                  )}
+                  {settings?.linkedin && (
+                    <li>
+                      <a href={settings.linkedin} target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-linkedin-in" />
+                      </a>
+                    </li>
+                  )}
+                  {settings?.pinterest && (
+                    <li>
+                      <a href={settings.pinterest} target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-pinterest-p" />
+                      </a>
+                    </li>
+                  )}
+                </ul>
               </div>
             </div>
           </div>

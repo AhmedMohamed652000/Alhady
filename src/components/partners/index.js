@@ -71,60 +71,69 @@ const Partners = ({
     fetchData();
   }, [propsTools, propsClients, propsPartners]);
 
-  const getSettings = useMemo(() => (items) => ({
-    infinite: items.length > 8,
-    slidesToShow: 8,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 6,
-          infinite: items.length > 6
+  const getSettings = useMemo(() => (items, type) => {
+    const isClients = type === 'clients';
+    const baseSlidesToShow = isClients ? 4 : 8;
+    const currentSlidesToShow = Math.min(baseSlidesToShow, items.length);
+    
+    return {
+      infinite: items.length > baseSlidesToShow,
+      slidesToShow: currentSlidesToShow,
+      slidesToScroll: 1,
+      autoplay: items.length > 1,
+      autoplaySpeed: 3000,
+      arrows: false,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: Math.min(isClients ? 3 : 6, items.length),
+            infinite: items.length > (isClients ? 3 : 6)
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: Math.min(isClients ? 2 : 4, items.length),
+            infinite: items.length > (isClients ? 2 : 4)
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: Math.min(isClients ? 2 : 3, items.length),
+            infinite: items.length > (isClients ? 2 : 3)
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: Math.min(isClients ? 1 : 2, items.length),
+            infinite: items.length > (isClients ? 1 : 2)
+          }
         }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          infinite: items.length > 4
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          infinite: items.length > 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          infinite: items.length > 2
-        }
-      }
-    ]
-  }), []);
+      ]
+    };
+  }, []);
 
   const renderSlider = (items, type) => {
     if (items.length === 0) {
       return <p className="py-4">No {type} available.</p>;
     }
 
+    const isClients = type === 'clients';
+    const imageSize = isClients ? 250 : 180;
+
     return (
-      <Slider {...getSettings(items)}>
+      <Slider {...getSettings(items, type)}>
         {items.map((item, index) => (
           <div key={item._id || `${type}-${index}`} className="partner-item">
             <OptimizedImage 
               src={getImageUrl(item.icon)} 
               alt={item.title} 
-              width={120}
-              height={120}
+              width={imageSize}
+              height={imageSize}
               style={{ objectFit: 'contain', margin: "auto" }}
               compress={true}
             />

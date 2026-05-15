@@ -4,8 +4,6 @@ const translations = {
     'Midnight Pro': 'لوحة التحكم',
 
     // Navigation
-    'Banners': 'اللافتات',
-    'Services': 'الخدمات',
     'Tools': 'الأدوات',
     'Clients': 'العملاء',
     'Partners': 'الشركاء',

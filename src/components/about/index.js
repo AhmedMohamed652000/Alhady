@@ -1,9 +1,11 @@
 import React from "react";
 import CountUp from "react-countup";
+import useSettings from "../../hooks/useSettings";
 
 import "./style.css";
 
 const About = () => {
+  const { settings } = useSettings();
   const bg = "/img/about_background_1.webp";
   const img1 = "/img/about-1-1_1.webp";
   const img2 = "/img/about-2-2_1.webp";
@@ -17,14 +19,12 @@ const About = () => {
               <div className="site-heading">
                 <h3 className="sub-title">ABOUT US</h3>
                 <h2 className="section-title">
-                  Partner with Al-Hady
+                  Partner with {settings?.companyName || "Al-Hady"}
                 </h2>
               </div>
               <p>
-                Digitize your building & construction
-                workflow and be More Profitable in
-                your Projects with a Trusted and Qualified
-                BIM Partner.
+                {settings?.aboutDescription || 
+                  "Digitize your building & construction workflow and be More Profitable in your Projects with a Trusted and Qualified BIM Partner."}
               </p>
 
               <div className="about-signature">
@@ -47,7 +47,7 @@ const About = () => {
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={15} duration={1} />
+                    <CountUp start={0} end={settings?.yearsExperience || 15} duration={1} />
                   </span>
                   +
                 </h2>
@@ -59,7 +59,7 @@ const About = () => {
               <div className="counter-box">
                 <h2>
                   <span className="counter">
-                    <CountUp start={0} end={187} duration={12.4} />
+                    <CountUp start={0} end={settings?.projectsCompleted || 187} duration={2} />
                   </span>
                   +
                 </h2>

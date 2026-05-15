@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import OptimizedImage from "../../utils/OptimizedImage";
-
+import useSettings from "../../hooks/useSettings";
 import "./style.css";
 
 const BlogSingle = () => {
+  const { settings } = useSettings();
   const SubmitHandler = (e) => {
     e.preventDefault();
   };
@@ -93,26 +94,60 @@ const BlogSingle = () => {
                 <div className="blog-left-content-share">
                   <h3>Share this post</h3>
                   <ul>
-                    <li>
-                      <Link to="/">
-                        <i className="fab fa-facebook-f" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/">
-                        <i className="fab fa-twitter" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/">
-                        <i className="fab fa-youtube" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/">
-                        <i className="fab fa-instagram-square" />
-                      </Link>
-                    </li>
+                    {settings?.facebook && (
+                      <li>
+                        <a href={settings.facebook} target="_blank" rel="noopener noreferrer">
+                          <i className="fab fa-facebook-f" />
+                        </a>
+                      </li>
+                    )}
+                    {settings?.twitter && (
+                      <li>
+                        <a href={settings.twitter} target="_blank" rel="noopener noreferrer">
+                          <i className="fab fa-twitter" />
+                        </a>
+                      </li>
+                    )}
+                    {settings?.instagram && (
+                      <li>
+                        <a href={settings.instagram} target="_blank" rel="noopener noreferrer">
+                          <i className="fab fa-instagram" />
+                        </a>
+                      </li>
+                    )}
+                    {settings?.linkedin && (
+                      <li>
+                        <a href={settings.linkedin} target="_blank" rel="noopener noreferrer">
+                          <i className="fab fa-linkedin-in" />
+                        </a>
+                      </li>
+                    )}
+                    {settings?.pinterest && (
+                      <li>
+                        <a href={settings.pinterest} target="_blank" rel="noopener noreferrer">
+                          <i className="fab fa-pinterest-p" />
+                        </a>
+                      </li>
+                    )}
+                    {!settings?.facebook && !settings?.twitter && !settings?.instagram && !settings?.pinterest && !settings?.linkedin && (
+                      <>
+                        <li>
+                          <Link to="/">
+                            <i className="fab fa-facebook-f" />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/">
+                            <i className="fab fa-twitter" />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/">
+                            <i className="fab fa-instagram" />
+                          </Link>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 </div>
               </div>

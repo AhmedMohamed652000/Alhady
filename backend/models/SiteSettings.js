@@ -41,6 +41,26 @@ const SiteSettingsSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  facebook: {
+    type: String,
+    default: ''
+  },
+  twitter: {
+    type: String,
+    default: ''
+  },
+  instagram: {
+    type: String,
+    default: ''
+  },
+  linkedin: {
+    type: String,
+    default: ''
+  },
+  pinterest: {
+    type: String,
+    default: ''
+  },
   updatedAt: {
     type: Date,
     default: Date.now

@@ -1,4 +1,5 @@
-const BASE_URL = 'https://alhady-five.vercel.app';
+// const BASE_URL = 'https://alhady-five.vercel.app';
+const BASE_URL = 'http://localhost:5000';
 const API_URL = `${BASE_URL}/api`;
 
 export function getImageUrl(path) {

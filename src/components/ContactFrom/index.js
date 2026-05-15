@@ -1,144 +1,143 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import useSettings from "../../hooks/useSettings";
 
-class ContactForm extends Component {
-  state = {
+const ContactForm = () => {
+  const { settings } = useSettings();
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     lastname: "",
-    events: "",
-    notes: "",
-    error: {},
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const changeHandler = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: "",
+      }));
+    }
   };
 
-  changeHandler = (e) => {
-    const error = this.state.error;
-    error[e.target.name] = "";
+  const validate = () => {
+    let tempErrors = {};
+    if (!formData.name) tempErrors.name = "Please enter your name";
+    if (!formData.lastname) tempErrors.lastname = "Please enter your lastname";
+    if (!formData.email) tempErrors.email = "Please enter your email";
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) tempErrors.email = "Email is invalid";
+    if (!formData.subject) tempErrors.subject = "Please enter your subject";
+    if (!formData.message) tempErrors.message = "Please enter your message";
 
-    this.setState({
-      [e.target.name]: e.target.value,
-      error,
-    });
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
   };
 
-  subimtHandler = (e) => {
+  const submitHandler = (e) => {
     e.preventDefault();
 
-    const { name, email, subject, lastname, events, notes, error } = this.state;
+    if (validate()) {
+      const recipientEmail = settings?.email || "info@alhady-eg.com";
+      const mailtoSubject = encodeURIComponent(formData.subject);
+      const mailtoBody = encodeURIComponent(
+        `Name: ${formData.name} ${formData.lastname}\n` +
+        `Email: ${formData.email}\n\n` +
+        `Message:\n${formData.message}`
+      );
 
-    if (name === "") {
-      error.name = "Please enter your name";
-    }
-    if (email === "") {
-      error.email = "Please enter your email";
-    }
-    if (subject === "") {
-      error.subject = "Please enter your subject";
-    }
-    if (lastname === "") {
-      error.lastname = "Please enter your Lastname";
-    }
-    if (events === "") {
-      error.events = "Select your event list";
-    }
-    if (notes === "") {
-      error.notes = "Please enter your note";
-    }
+      window.location.href = `mailto:${recipientEmail}?subject=${mailtoSubject}&body=${mailtoBody}`;
 
-    if (error) {
-      this.setState({
-        error,
-      });
-    }
-    if (
-      error.name === "" &&
-      error.email === "" &&
-      error.email === "" &&
-      error.lastname === "" &&
-      error.subject === "" &&
-      error.events === "" &&
-      error.notes === ""
-    ) {
-      this.setState({
+      // Optionally clear the form
+      setFormData({
         name: "",
         email: "",
         subject: "",
-        events: "",
-        notes: "",
-        error: {},
+        lastname: "",
+        message: "",
       });
     }
   };
 
-  render() {
-    const { name, email, subject, lastname, error } = this.state;
-
-    return (
-      <form onSubmit={this.subimtHandler} className="form">
-        <div className="row">
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-field">
-              <input
-                value={name}
-                onChange={this.changeHandler}
-                type="text"
-                name="name"
-                placeholder="Name"
-              />
-              <p>{error.name ? error.name : ""}</p>
-            </div>
-          </div>
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-field">
-              <input
-                value={lastname}
-                onChange={this.changeHandler}
-                type="text"
-                name="lastname"
-                placeholder="Lastname"
-              />
-              <p>{error.lastname ? error.lastname : ""}</p>
-            </div>
-          </div>
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-field">
-              <input
-                onChange={this.changeHandler}
-                value={email}
-                type="email"
-                name="email"
-                placeholder="Email"
-              />
-              <p>{error.email ? error.email : ""}</p>
-            </div>
-          </div>
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-field">
-              <input
-                onChange={this.changeHandler}
-                value={subject}
-                type="text"
-                name="subject"
-                placeholder="Subject"
-              />
-              <p>{error.subject ? error.subject : ""}</p>
-            </div>
-          </div>
-          <div className="col-lg-12 col-sm-12">
-            <div className="form-field">
-              <textarea name="message" placeholder="Message"></textarea>
-            </div>
-          </div>
-          <div className="col-lg-12">
-            <div className="contact-form-action">
-              <button className="form-button btn-fill" type="submit">
-                Send Message
-              </button>
-            </div>
+  return (
+    <form onSubmit={submitHandler} className="form">
+      <div className="row">
+        <div className="col-lg-6 col-sm-6">
+          <div className="form-field">
+            <input
+              value={formData.name}
+              onChange={changeHandler}
+              type="text"
+              name="name"
+              placeholder="Name"
+            />
+            {errors.name && <p className="error-text">{errors.name}</p>}
           </div>
         </div>
-      </form>
-    );
-  }
-}
+        <div className="col-lg-6 col-sm-6">
+          <div className="form-field">
+            <input
+              value={formData.lastname}
+              onChange={changeHandler}
+              type="text"
+              name="lastname"
+              placeholder="Lastname"
+            />
+            {errors.lastname && <p className="error-text">{errors.lastname}</p>}
+          </div>
+        </div>
+        <div className="col-lg-6 col-sm-6">
+          <div className="form-field">
+            <input
+              onChange={changeHandler}
+              value={formData.email}
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            {errors.email && <p className="error-text">{errors.email}</p>}
+          </div>
+        </div>
+        <div className="col-lg-6 col-sm-6">
+          <div className="form-field">
+            <input
+              onChange={changeHandler}
+              value={formData.subject}
+              type="text"
+              name="subject"
+              placeholder="Subject"
+            />
+            {errors.subject && <p className="error-text">{errors.subject}</p>}
+          </div>
+        </div>
+        <div className="col-lg-12 col-sm-12">
+          <div className="form-field">
+            <textarea
+              name="message"
+              placeholder="Message"
+              value={formData.message}
+              onChange={changeHandler}
+            ></textarea>
+            {errors.message && <p className="error-text">{errors.message}</p>}
+          </div>
+        </div>
+        <div className="col-lg-12">
+          <div className="contact-form-action">
+            <button className="form-button btn-fill" type="submit">
+              Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  );
+};
+
 export default ContactForm;

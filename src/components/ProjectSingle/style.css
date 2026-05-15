@@ -96,15 +96,6 @@
 	letter-spacing: 5px;
 }
 
-.project-details-box-meta-text {
-	padding: 30px;
-	background: rgba(249, 249, 249, 0.76);
-}
-
-.project-details-box-meta-text a {
-	font-weight: 500
-}
-
 .project-overview-box {
 	text-align: center;
 	margin: 15px 0
