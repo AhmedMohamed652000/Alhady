@@ -18,6 +18,7 @@ const reviewsRouter = require('./routes/reviews');
 const portfolioRouter = require('./routes/portfolio');
 const projectsRouter = require('./routes/projects');
 const settingsRouter = require('./routes/settings');
+const jobsRouter = require('./routes/jobs');
 
 
 
@@ -160,6 +161,7 @@ app.use('/api/reviews', reviewsRouter);
 app.use('/api/portfolio', portfolioRouter);
 app.use('/api/projects', projectsRouter);
 app.use('/api/settings', settingsRouter);
+app.use('/api/jobs', jobsRouter);
 
 // Root route for health check
 app.get('/', (req, res) => {

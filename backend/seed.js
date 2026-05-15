@@ -15,6 +15,7 @@ const Review = require('./models/Review');
 const Portfolio = require('./models/Portfolio');
 const Project = require('./models/Project');
 const SiteSettings = require('./models/SiteSettings');
+const Job = require('./models/Job');
 
 // Data
 const seedData = require('./data/seed-data');
@@ -33,71 +34,46 @@ async function seed() {
         const hashedPassword = await bcrypt.hash('admin123', 10);
         await Admin.findOneAndUpdate(
             { email: adminEmail },
-            { 
-                email: adminEmail, 
-                passwordHash: hashedPassword 
+            {
+                email: adminEmail,
+                passwordHash: hashedPassword
             },
             { upsert: true, new: true }
         );
         console.log('Admin seeded.');
 
-        // 2. Seed Banners (by page)
-        for (const item of seedData.banners) {
-            await Banner.findOneAndUpdate({ page: item.page }, item, { upsert: true });
-        }
-        console.log(`Seeded ${seedData.banners.length} banners.`);
+        // Helper to seed array data
+        const seedCollection = async (data, model, queryKey, label) => {
+            if (data && Array.isArray(data)) {
+                for (const item of data) {
+                    const query = {};
+                    if (Array.isArray(queryKey)) {
+                        queryKey.forEach(k => query[k] = item[k]);
+                    } else {
+                        query[queryKey] = item[queryKey];
+                    }
+                    await model.findOneAndUpdate(query, item, { upsert: true });
+                }
+                console.log(`Seeded ${data.length} ${label}.`);
+            }
+        };
 
-        // 3. Seed Services (by title)
-        for (const item of seedData.services) {
-            await Service.findOneAndUpdate({ title: item.title }, item, { upsert: true });
-        }
-        console.log(`Seeded ${seedData.services.length} services.`);
+        await seedCollection(seedData.banners, Banner, 'page', 'banners');
+        await seedCollection(seedData.services, Service, 'title', 'services');
+        await seedCollection(seedData.tools, Tool, 'title', 'tools');
+        await seedCollection(seedData.clients, Client, 'title', 'clients');
+        await seedCollection(seedData.partners, Partner, 'title', 'partners');
+        await seedCollection(seedData.team, Team, 'name', 'team members');
+        await seedCollection(seedData.reviews, Review, ['name', 'jobTitle'], 'reviews');
+        await seedCollection(seedData.portfolio, Portfolio, 'title', 'portfolio items');
+        await seedCollection(seedData.projects, Project, 'title', 'projects');
+        await seedCollection(seedData.jobs, Job, 'title', 'jobs');
 
-        // 4. Seed Tools (by title)
-        for (const item of seedData.tools) {
-            await Tool.findOneAndUpdate({ title: item.title }, item, { upsert: true });
+        // Seed SiteSettings (singleton)
+        if (seedData.settings) {
+            await SiteSettings.updateOne({}, seedData.settings, { upsert: true });
+            console.log('Site settings seeded.');
         }
-        console.log(`Seeded ${seedData.tools.length} tools.`);
-
-        // 5. Seed Clients (by title)
-        for (const item of seedData.clients) {
-            await Client.findOneAndUpdate({ title: item.title }, item, { upsert: true });
-        }
-        console.log(`Seeded ${seedData.clients.length} clients.`);
-
-        // 6. Seed Partners (by title)
-        for (const item of seedData.partners) {
-            await Partner.findOneAndUpdate({ title: item.title }, item, { upsert: true });
-        }
-        console.log(`Seeded ${seedData.partners.length} partners.`);
-
-        // 7. Seed Team (by name)
-        for (const item of seedData.team) {
-            await Team.findOneAndUpdate({ name: item.name }, item, { upsert: true });
-        }
-        console.log(`Seeded ${seedData.team.length} team members.`);
-
-        // 8. Seed Reviews (by name and jobTitle)
-        for (const item of seedData.reviews) {
-            await Review.findOneAndUpdate({ name: item.name, jobTitle: item.jobTitle }, item, { upsert: true });
-        }
-        console.log(`Seeded ${seedData.reviews.length} reviews.`);
-
-        // 9. Seed Portfolio (by title)
-        for (const item of seedData.portfolio) {
-            await Portfolio.findOneAndUpdate({ title: item.title }, item, { upsert: true });
-        }
-        console.log(`Seeded ${seedData.portfolio.length} portfolio items.`);
-
-        // 10. Seed Projects (by title)
-        for (const item of seedData.projects) {
-            await Project.findOneAndUpdate({ title: item.title }, item, { upsert: true });
-        }
-        console.log(`Seeded ${seedData.projects.length} projects.`);
-
-        // 11. Seed SiteSettings (singleton)
-        await SiteSettings.updateOne({}, seedData.settings, { upsert: true });
-        console.log('Site settings seeded.');
 
         console.log('Seeding completed successfully!');
         process.exit(0);

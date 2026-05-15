@@ -34,6 +34,11 @@ const menus = [
     link: "/team",
   },
   {
+    id: 8,
+    title: "Jobs",
+    link: "/jobs",
+  },
+  {
     id: 5,
     title: "About",
     link: "/about",

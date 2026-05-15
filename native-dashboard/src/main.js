@@ -66,6 +66,11 @@ const settingsPage = () => createSettingsPage([
   { label: 'Hero Subtitle', key: 'heroSubtitle' },
 ]);
 
+const jobPage = () => createCrudPage('Jobs', '/jobs',
+  [{ label: 'Title', key: 'title' }, { label: 'Location', key: 'location' }, { label: 'Type', key: 'type' }],
+  [{ label: 'Title', key: 'title' }, { label: 'Location', key: 'location' }, { label: 'Type', key: 'type' }, { label: 'Salary', key: 'salary' }, { label: 'Description', key: 'description', type: 'textarea' }, { label: 'Requirements', key: 'requirements', type: 'textarea' }, { label: 'Order', key: 'order' }, { label: 'Active', key: 'active', type: 'boolean' }]
+);
+
 const pagesMap = {
   projects: projectPage,
   clients: clientPage,
@@ -74,6 +79,7 @@ const pagesMap = {
   tools: toolPage,
   portfolio: portfolioPage,
   reviews: reviewPage,
+  jobs: jobPage,
   settings: settingsPage,
 };
 

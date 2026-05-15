@@ -11,6 +11,7 @@ const translations = {
     'Projects': 'المشاريع',
     'Portfolio': 'معرض الأعمال',
     'Reviews': 'التقييمات',
+    'Jobs': 'الوظائف',
     'Settings': 'الإعدادات',
 
     // Auth
@@ -111,6 +112,9 @@ const translations = {
     'About Description': 'وصف نبذة عنا',
     'Hero Title': 'عنوان البانر الرئيسي',
     'Hero Subtitle': 'العنوان الفرعي للبانر',
+    'Salary': 'الراتب',
+    'Requirements': 'المتطلبات',
+    'Type': 'النوع',
   }
 };
 

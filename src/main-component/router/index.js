@@ -15,6 +15,7 @@ import ContactPage from '../ContactPage'
 import ErrorPage from '../ErrorPage'
 import BlogPage from '../BlogPage'
 import BlogSinglePage from '../BlogSinglePage'
+import JobPage from '../JobPage'
 
 const AllRoute = () => { 
 
@@ -32,6 +33,7 @@ const AllRoute = () => {
             <Route path='/service-single' component={ServiceSinglePage} />
             <Route path='/portfolio' component={PortfolioPage} />
             <Route path='/team' component={TeamPage} />
+            <Route path='/jobs' component={JobPage} />
             <Route path='/faq' component={FaqPage} />
             <Route path='/contact' component={ContactPage} />
             <Route path='/404' component={ErrorPage} />

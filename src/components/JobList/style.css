@@ -1,0 +1,93 @@
+.job-card {
+    transition: all 0.3s ease;
+    border-left: 5px solid transparent;
+    background-color: #111; /* Dark background for the card */
+    border: 1px solid #333;
+}
+
+.job-card:hover {
+    border-left-color: #d4af37; /* Gold color matching the theme */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1) !important;
+}
+
+.job-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    /* Use the gold gradient from App.css */
+    background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.job-meta {
+    margin-bottom: 15px;
+}
+
+.job-meta span {
+    font-size: 14px;
+    color: #aaa;
+    margin-right: 20px;
+}
+
+.job-meta i {
+    color: #d4af37;
+}
+
+.job-description {
+    color: #ddd;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.job-requirements {
+    border-top: 1px solid #222;
+    padding-top: 15px;
+}
+
+.job-requirements h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #d4af37;
+}
+
+.job-requirements p {
+    font-size: 15px;
+    color: #bbb;
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.theme-btn {
+    background: #d4af37;
+    color: #000 !important;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-text-fill-color: #000 !important;
+}
+
+.theme-btn:hover {
+    background: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37 !important;
+    -webkit-text-fill-color: #d4af37 !important;
+}
+
+/* Section Title adjustment */
+.section-title h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: #aaa;
+    font-size: 18px;
+}
